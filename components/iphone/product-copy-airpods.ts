@@ -1,10 +1,11 @@
 import { resolveContentLanguage, type ContentLanguage, type Language } from "./i18n";
 import type { AirPodsModel } from "./product-data";
 import type { ProductCopy } from "./product-copy-types";
+import { getAdditionalAirPodsProductCopy } from "./product-copy-airpods-history";
 
 const airPodsProductCopy: Record<
   ContentLanguage,
-  Record<AirPodsModel, ProductCopy>
+  Partial<Record<AirPodsModel, ProductCopy>>
 > = {
   en: {
     "airpods-5": {
@@ -162,5 +163,10 @@ export function getAirPodsProductCopy(
   language: Language,
   model: AirPodsModel,
 ) {
-  return airPodsProductCopy[resolveContentLanguage(language)][model];
+  const contentLanguage = resolveContentLanguage(language);
+  const copy = airPodsProductCopy[contentLanguage][model]
+    ?? getAdditionalAirPodsProductCopy(contentLanguage, model)
+    ?? airPodsProductCopy.en[model];
+  if (!copy) throw new Error(`Missing AirPods product copy for ${model}`);
+  return copy;
 }

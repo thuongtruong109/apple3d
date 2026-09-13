@@ -1,4 +1,5 @@
 import type { AppleWatchModel } from "../product-data";
+import { historicalAppleWatchTechnicalSpecs } from "./apple-watch-history";
 import { fact, type ProductTechnicalSpecCatalog } from "./types";
 
 export const appleWatchTechnicalSpecs = {
@@ -53,4 +54,5 @@ export const appleWatchTechnicalSpecs = {
       compatibility: fact("Requires iPhone 11 or later with iOS 26 or later; health features vary by region", "Cần iPhone 11 trở lên với iOS 26 trở lên; tính năng sức khỏe thay đổi theo khu vực"),
     },
   },
+  ...historicalAppleWatchTechnicalSpecs,
 } as const satisfies Pick<ProductTechnicalSpecCatalog, AppleWatchModel>;

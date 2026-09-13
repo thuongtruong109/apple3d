@@ -7,9 +7,12 @@ Mac, AirPods, and Apple Vision into independent catalog boundaries.
 The iPhone catalog includes iPhone 18 Pro, iPhone Duo, and the complete iPhone
 17, iPhone 16, iPhone 15, and iPhone 14 families. The iPad catalog includes the
 13-inch iPad Pro M5, 13-inch iPad Air M4, iPad A16, and iPad mini A17 Pro. The Apple Watch catalog includes
-Apple Watch Series 11, Apple Watch Ultra 3, and Apple Watch SE 3. The AirPods
-catalog includes AirPods 5, AirPods Pro 3, and AirPods Max 2. Their browser-ready
-models are converted from Apple's public AR assets. The Mac catalog includes
+every verified public-AR generation from Series 3 through Series 11, the original
+Ultra through Ultra 3, and the first- and third-generation SE. The AirPods catalog
+includes AirPods 3 through AirPods 5, both AirPods 4 configurations, both AirPods 5
+charging-case configurations, all three AirPods Pro generations, and both AirPods
+Max generations. Their browser-ready models are converted from Apple's public AR
+assets; no older mesh is relabeled when Apple has not published an asset. The Mac catalog includes
 the 13- and 15-inch MacBook Air M5, 14-inch MacBook Pro M5, iMac M4, Mac mini M6, Mac Studio M5, and the
 final Mac Pro with M2 Ultra. Apple Vision exposes its planned series and can
 receive dedicated model, finish, copy, and AR modules without coupling it to
@@ -20,6 +23,14 @@ product pages do not publish downloadable USDZ assets. The catalog therefore
 uses Series 11, Ultra 3, and SE 3: the latest model in each Apple Watch branch
 for which Apple has published a public AR source, rather than relabeling an
 older mesh as a newer device.
+
+Apple's public CDN still serves verified AR assets for Apple Watch Series 10, 9,
+8, 7, 6, 5, and 3, but no verified first-party USDZ was found for Series 4, 2,
+or 1. Those three generations remain intentionally absent. The same verification
+found first-party scenes for the requested historical AirPods products. AirPods 5
+with Wireless Charging Case and AirPods 4 with Active Noise Cancellation reuse
+the identical Apple-published geometry where their official USDZ is byte-for-byte
+the same as the current AirPods 5 scene.
 
 Apple no longer lists Mac Pro in its current Mac lineup and `/mac-pro/` now
 redirects to the Mac overview. The catalog preserves Apple's last Mac Pro,

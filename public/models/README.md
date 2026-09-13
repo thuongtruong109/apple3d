@@ -18,11 +18,26 @@
 - `ipad-a16.usdz` — Apple AR asset for iPad in Pink.
 - `ipad-mini-a17-pro.usdz` — Apple AR asset for iPad mini in Purple.
 - `apple-watch-series-11.usdz` — Apple AR asset for Apple Watch Series 11 in Rose Gold with a Light Blush Sport Band.
+- `apple-watch-series-10.usdz` — Apple AR asset for Apple Watch Series 10 in Jet Black.
+- `apple-watch-series-9.usdz` — Apple AR asset for Apple Watch Series 9 in Starlight.
+- `apple-watch-series-8.usdz` — Apple AR asset for Apple Watch Series 8 in Starlight.
+- `apple-watch-series-7.usdz` — Apple AR asset for Apple Watch Series 7 in Midnight.
+- `apple-watch-series-6.usdz` — Apple AR asset for Apple Watch Series 6.
+- `apple-watch-series-5.usdz` — Apple AR asset for Apple Watch Series 5.
+- `apple-watch-series-3.usdz` — Apple AR asset for Apple Watch Series 3.
 - `apple-watch-ultra-3.usdz` — Apple AR asset for Apple Watch Ultra 3 in Natural Titanium.
+- `apple-watch-ultra-2.usdz` — Apple AR asset for Apple Watch Ultra 2 in Black Titanium.
+- `apple-watch-ultra.usdz` — Apple AR asset for the original Apple Watch Ultra in Natural Titanium.
 - `apple-watch-se-3.usdz` — Apple AR asset for Apple Watch SE 3 in Midnight.
+- `apple-watch-se.usdz` — Apple AR asset for the first-generation Apple Watch SE in Silver.
 - `airpods-5.usdz` — Apple AR asset for AirPods 5 in White.
+- `airpods-4.usdz` — Apple AR asset for AirPods 4 in White.
+- `airpods-3.usdz` — Apple AR asset for third-generation AirPods with MagSafe Charging Case.
 - `airpods-pro-3.usdz` — Apple AR asset for AirPods Pro 3 in White.
+- `airpods-pro-2.usdz` — Apple AR asset for second-generation AirPods Pro with MagSafe Charging Case.
+- `airpods-pro.usdz` — Apple AR asset for first-generation AirPods Pro.
 - `airpods-max-2.usdz` — Apple AR asset for AirPods Max 2 with Apple's Midnight color variant selected for the browser export.
+- `airpods-max.usdz` — Apple AR asset for first-generation AirPods Max in Green.
 - `macbook-air-m5.usdz` — Apple AR asset for the 13-inch MacBook Air with M5 in Sky Blue.
 - `macbook-air-15-m5.usdz` — Apple AR asset for the 15-inch MacBook Air with M5 in Sky Blue.
 - `macbook-pro-m5.usdz` — Apple AR asset for the 14-inch MacBook Pro M5 family in Space Black.
@@ -39,8 +54,8 @@
 - `iphone-15-pro*.glb` and `iphone-15*.glb` — browser-ready exports of all four iPhone 15 series devices.
 - `iphone-14-pro*.glb` and `iphone-14*.glb` — browser-ready exports of all four iPhone 14 series devices.
 - `ipad-pro-m5.glb`, `ipad-air-m4.glb`, `ipad-a16.glb`, and `ipad-mini-a17-pro.glb` — browser-ready exports of the exact iPad sizes identified above.
-- `apple-watch-series-11.glb`, `apple-watch-ultra-3.glb`, and `apple-watch-se-3.glb` — browser-ready exports of the latest complete Apple Watch lineup for which Apple published public AR assets.
-- `airpods-5.glb`, `airpods-pro-3.glb`, and `airpods-max-2.glb` — indexed browser-ready exports of Apple's current AirPods, AirPods Pro, and AirPods Max AR scenes.
+- `apple-watch-series-*.glb`, `apple-watch-ultra*.glb`, and `apple-watch-se*.glb` — browser-ready exports for all verified Watch generations listed above. Series 4, 2, and 1 are intentionally omitted because no first-party public USDZ was verified.
+- `airpods-*.glb` — indexed browser-ready exports for the verified AirPods generations. AirPods 5 with Wireless Charging Case and AirPods 4 with Active Noise Cancellation map to `airpods-5.glb`: Apple's corresponding USDZ payloads have the same SHA-256 (`BA3BBB92B50CF48D7D93C50F327BE39E70270266884EA7AD7E83E09B89F48C01`).
 - `macbook-air-m5.glb`, `macbook-air-15-m5.glb`, `macbook-pro-m5.glb`, `imac-m4.glb`, `mac-mini-m6.glb`, `mac-studio-m5.glb`, and `mac-pro-m2-ultra.glb` — browser-ready exports for the supported Mac branches and exact notebook sizes.
 - `apple-vision-pro-m5.glb` — browser-ready export of the current Apple Vision Pro AR scene.
 
@@ -73,11 +88,27 @@ Original public AR URLs:
 - https://www.apple.com/105/media/us/ipad-11/2025/21af9618-666d-4368-9fb9-38822c35dc35/ar/ipad-11-pink.usdz
 - https://www.apple.com/105/media/us/ipad-mini/2024/ab503ae9-d404-4d31-8983-47a8cb46614f/ar/ipad-mini-purple.usdz
 - https://www.apple.com/105/media/us/apple-watch-series-11/2025/cb7dae4b-d675-49db-8fe3-d4f635c1a345/ar/watch-series-11.usdz
+- https://www.apple.com/105/media/us/watch/shared/2024/5675c4ad-842d-4d05-89bc-60b6bbd11575/ar/apple-watch-series-10-jet-black.usdz
+- https://www.apple.com/105/media/us/watch/shared/2023/be1de864-bb10-4b04-aea6-99eb6655a1f9/ar/watch_S9_gps.usdz
+- https://www.apple.com/105/media/us/apple-watch-series-8/2022/f1d3c9a3-865e-4b6b-b3e9-21e9a6d46ce2/ar/watch_S8_gps_alum_stardust_l_sport_loop_stardust_ios15.usdz
+- https://www.apple.com/105/media/us/apple-watch-series-7/2021/a5affa3e-7ae5-424a-824e-6e7c997829b2/ar/watch_S7_gps_alum_midnight_l_sport_band_midnight_ios15.usdz
+- https://www.apple.com/105/media/us/apple-watch-series-6/2020/7f870ecd-39d9-4ae4-9d90-3f1ff588df98/quick-look/gps-cellular/modern/apple-watch-series-6.usdz
+- https://www.apple.com/105/media/us/apple-watch-series-5/2019/a3cf23d2_ce87_47f5_9668_f6c325b9bb65/quick-look/modern/apple-watch-series-5.usdz
+- https://www.apple.com/105/media/us/apple-watch-series-3/2020/6ac0cb6a-6c6a-49c9-ab52-f297386c9122/quick-look/gps/modern/apple-watch-series-3.usdz
 - https://www.apple.com/105/media/us/apple-watch-ultra-3/2025/dabb0ca4-1556-466c-a314-ae3ba2cc088e/ar/watch-ultra-3.usdz
+- https://www.apple.com/105/media/us/watch/shared/2024/5675c4ad-842d-4d05-89bc-60b6bbd11575/ar/apple-watch-ultra-2.usdz
+- https://www.apple.com/105/media/us/apple-watch-ultra/2022/4d9e62e1-fe94-4bb9-abbe-0b8c9626a304/ar/watch_ultra_I_ocean_band_midnight_us_ios15.usdz
 - https://www.apple.com/105/media/us/apple-watch-se-3/2025/499c4097-d6f9-4dbe-b2c3-7cdf022ce822/ar/watch-se-3.usdz
+- https://www.apple.com/105/media/us/apple-watch-se/2020/a2e86bd7-8c1e-4214-952e-80385aba937d/quick-look/gps/modern/watch_SE_gps_alum_silver_l_sport_band_abyss_blue_ios15.usdz
 - https://www.apple.com/105/media/us/airpods-5/2026/1bae77a6-82ef-46c2-875f-571e880dbfe2/ar/airpods-mid.usdz
+- https://www.apple.com/105/media/us/airpods-4/2024/62a51629-9227-413a-98ae-ba9e09984c00/ar/airpods-entry.usdz
+- https://www.apple.com/105/media/us/airpods-4/2024/62a51629-9227-413a-98ae-ba9e09984c00/ar/airpods-mid.usdz
+- https://www.apple.com/105/media/us/airpods-3rd-generation/2021/3c0b27aa-a5fe-4365-a9ae-83c28d10fa21/ar/airpods_magsafe_charging_ios15.usdz
 - https://www.apple.com/105/media/us/airpods-pro/2025/7acffb13-4adb-40b1-9393-8f1c99bc6c90/ar/airpods-pro.usdz
+- https://www.apple.com/105/media/us/airpods-pro/2022/d2deeb8e-83eb-48ea-9721-f567cf0fffa8/ar/airpods_pro_with_magsafe_charging_case_ios15.usdz
+- https://www.apple.com/105/media/us/airpods-pro/2021/8d0b339b-f0f9-4522-aaa5-e047097ea8ec/ar/airpods_pro_ios15.usdz
 - https://www.apple.com/105/media/us/airpods-max/2024/e8f376d6-82b2-40ca-8a22-5f87de755d6b/ar/airpods-max-midnight-variant.usdz
+- https://www.apple.com/105/media/us/airpods-max/2020/996b980b-3131-44f1-af6c-fe72f9b3bfb5/quick-look/airpods_max_green_ios14_rev1.usdz
 - https://www.apple.com/105/media/us/macbook-air/2026/ff11cb38-708e-4c28-9653-1b01a2f8fd2b/ar/macbook-air-13in-sky-blue.usdz
 - https://www.apple.com/105/media/us/macbook-air/2026/ff11cb38-708e-4c28-9653-1b01a2f8fd2b/ar/macbook-air-15in-sky-blue.usdz
 - https://www.apple.com/105/media/us/macbook-pro/2025/785e1bc4-d1bd-4cf4-b1b3-94b9411c9e74/ar/macbook-pro-14-in-space-black-variant.usdz

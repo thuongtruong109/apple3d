@@ -1,4 +1,5 @@
 import type { AirPodsModel } from "../product-data";
+import { historicalAirPodsTechnicalSpecs } from "./airpods-history";
 import { fact, type ProductTechnicalSpecCatalog } from "./types";
 
 export const airPodsTechnicalSpecs = {
@@ -7,12 +8,12 @@ export const airPodsTechnicalSpecs = {
     sourceUrl: "https://www.apple.com/airpods-5/specs/",
     fields: {
       finishes: fact("White", "Trắng"),
-      dimensions: fact("Each earbud: 30.2 × 18.3 × 18.1 mm, 4.3 g; case: 46.2 × 50.1 × 21.2 mm, 32.3 g or 34.7 g", "Mỗi tai nghe: 30,2 × 18,3 × 18,1 mm, 4,3 g; hộp: 46,2 × 50,1 × 21,2 mm, 32,3 g hoặc 34,7 g"),
+      dimensions: fact("Each earbud: 30.2 × 18.3 × 18.1 mm, 4.3 g; USB‑C case: 46.2 × 50.1 × 21.2 mm, 32.3 g", "Mỗi tai nghe: 30,2 × 18,3 × 18,1 mm, 4,3 g; hộp USB‑C: 46,2 × 50,1 × 21,2 mm, 32,3 g"),
       chip: fact("Apple H2 headphone chip", "Chip tai nghe Apple H2"),
       audio: fact("Active Noise Cancellation, Adaptive Audio, Transparency, Conversation Awareness, Adaptive EQ, personalized Spatial Audio and studio-quality recording", "Chống Ồn Chủ Động, Âm Thanh Thích Ứng, Xuyên Âm, Nhận Biết Cuộc Hội Thoại, Adaptive EQ, Âm Thanh Không Gian cá nhân hóa và thu âm chuẩn studio"),
-      sensors: fact("Beamforming and inward-facing microphones, optical in-ear sensor, motion and speech accelerometers, force control; volume swipe on wireless-case model", "Micro định hướng và hướng vào trong, cảm biến quang học trong tai, gia tốc kế chuyển động và giọng nói, điều khiển lực; vuốt âm lượng trên bản hộp sạc không dây"),
-      battery: fact("Standard case: up to 4 hours per charge / 20 hours total with ANC; wireless case: up to 5 hours / 22 hours total", "Hộp tiêu chuẩn: đến 4 giờ mỗi lần sạc / tổng 20 giờ khi bật ANC; hộp không dây: đến 5 giờ / tổng 22 giờ"),
-      charging: fact("USB‑C; wireless-case model also supports Apple Watch and Qi chargers; 5 minutes in the case gives about 1 hour", "USB‑C; bản hộp không dây còn hỗ trợ bộ sạc Apple Watch và Qi; 5 phút trong hộp cho khoảng 1 giờ nghe"),
+      sensors: fact("Beamforming and inward-facing microphones, optical in-ear sensor, motion and speech accelerometers, and force control", "Micro định hướng và hướng vào trong, cảm biến quang học trong tai, gia tốc kế chuyển động và giọng nói, điều khiển lực"),
+      battery: fact("Up to 4 hours per charge and up to 20 hours total with Active Noise Cancellation", "Đến 4 giờ mỗi lần sạc và tổng đến 20 giờ khi bật Chống Ồn Chủ Động"),
+      charging: fact("USB‑C; 5 minutes in the case gives about 1 hour", "USB‑C; 5 phút trong hộp cho khoảng 1 giờ nghe"),
       durability: fact("IP57 dust, sweat, and water resistance", "Kháng bụi, mồ hôi và nước IP57"),
       connectivity: "Bluetooth 5.3",
       compatibility: fact("Latest iOS, iPadOS, watchOS, macOS, tvOS, or visionOS recommended; usable as limited Bluetooth headphones on other devices", "Khuyến nghị iOS, iPadOS, watchOS, macOS, tvOS hoặc visionOS mới nhất; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
@@ -49,4 +50,5 @@ export const airPodsTechnicalSpecs = {
       compatibility: fact("Latest Apple operating systems recommended; usable as limited Bluetooth headphones on other devices", "Khuyến nghị hệ điều hành Apple mới nhất; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
     },
   },
+  ...historicalAirPodsTechnicalSpecs,
 } as const satisfies Pick<ProductTechnicalSpecCatalog, AirPodsModel>;

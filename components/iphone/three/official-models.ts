@@ -78,20 +78,71 @@ const OFFICIAL_MODEL_URLS: Record<Exclude<Model, "duo">, Partial<Record<Finish, 
   "apple-watch-series-11": {
     "rose-gold": "/models/apple-watch-series-11.glb",
   },
+  "apple-watch-series-10": {
+    black: "/models/apple-watch-series-10.glb",
+  },
+  "apple-watch-series-9": {
+    starlight: "/models/apple-watch-series-9.glb",
+  },
+  "apple-watch-series-8": {
+    starlight: "/models/apple-watch-series-8.glb",
+  },
+  "apple-watch-series-7": {
+    midnight: "/models/apple-watch-series-7.glb",
+  },
+  "apple-watch-series-6": {
+    silver: "/models/apple-watch-series-6.glb",
+  },
+  "apple-watch-series-5": {
+    silver: "/models/apple-watch-series-5.glb",
+  },
+  "apple-watch-series-3": {
+    silver: "/models/apple-watch-series-3.glb",
+  },
   "apple-watch-ultra-3": {
     "natural-titanium": "/models/apple-watch-ultra-3.glb",
+  },
+  "apple-watch-ultra-2": {
+    black: "/models/apple-watch-ultra-2.glb",
+  },
+  "apple-watch-ultra": {
+    "natural-titanium": "/models/apple-watch-ultra.glb",
   },
   "apple-watch-se-3": {
     midnight: "/models/apple-watch-se-3.glb",
   },
+  "apple-watch-se": {
+    silver: "/models/apple-watch-se.glb",
+  },
   "airpods-5": {
     white: "/models/airpods-5.glb",
+  },
+  "airpods-5-wireless": {
+    white: "/models/airpods-5.glb",
+  },
+  "airpods-4": {
+    white: "/models/airpods-4.glb",
+  },
+  "airpods-4-anc": {
+    white: "/models/airpods-5.glb",
+  },
+  "airpods-3": {
+    white: "/models/airpods-3.glb",
   },
   "airpods-pro-3": {
     white: "/models/airpods-pro-3.glb",
   },
+  "airpods-pro-2": {
+    white: "/models/airpods-pro-2.glb",
+  },
+  "airpods-pro": {
+    white: "/models/airpods-pro.glb",
+  },
   "airpods-max-2": {
     midnight: "/models/airpods-max-2.glb",
+  },
+  "airpods-max": {
+    green: "/models/airpods-max.glb",
   },
   "macbook-air-m5": {
     "sky-blue": "/models/macbook-air-m5.glb",

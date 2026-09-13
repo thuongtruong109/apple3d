@@ -1,10 +1,11 @@
 import { resolveContentLanguage, type ContentLanguage, type Language } from "./i18n";
 import type { AppleWatchModel } from "./product-data";
 import type { ProductCopy } from "./product-copy-types";
+import { getHistoricalAppleWatchProductCopy } from "./product-copy-apple-watch-history";
 
 const appleWatchProductCopy: Record<
   ContentLanguage,
-  Record<AppleWatchModel, ProductCopy>
+  Partial<Record<AppleWatchModel, ProductCopy>>
 > = {
   en: {
     "apple-watch-series-11": {
@@ -156,5 +157,10 @@ export function getAppleWatchProductCopy(
   language: Language,
   model: AppleWatchModel,
 ) {
-  return appleWatchProductCopy[resolveContentLanguage(language)][model];
+  const contentLanguage = resolveContentLanguage(language);
+  const copy = appleWatchProductCopy[contentLanguage][model]
+    ?? getHistoricalAppleWatchProductCopy(contentLanguage, model)
+    ?? appleWatchProductCopy.en[model];
+  if (!copy) throw new Error(`Missing Apple Watch product copy for ${model}`);
+  return copy;
 }

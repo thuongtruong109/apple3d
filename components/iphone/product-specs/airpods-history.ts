@@ -1,0 +1,121 @@
+import type { AirPodsModel } from "../product-data";
+import { fact, type ProductTechnicalSpecCatalog } from "./types";
+
+type HistoricalAirPodsModel = Exclude<
+  AirPodsModel,
+  "airpods-5" | "airpods-pro-3" | "airpods-max-2"
+>;
+
+export const historicalAirPodsTechnicalSpecs = {
+  "airpods-5-wireless": {
+    introduced: "2026",
+    sourceUrl: "https://www.apple.com/airpods-5/specs/",
+    fields: {
+      finishes: fact("White", "Trắng"),
+      dimensions: fact("Each earbud: 30.2 × 18.3 × 18.1 mm, 4.3 g; wireless charging case: 46.2 × 50.1 × 21.2 mm, 34.7 g", "Mỗi tai nghe: 30,2 × 18,3 × 18,1 mm, 4,3 g; hộp sạc không dây: 46,2 × 50,1 × 21,2 mm, 34,7 g"),
+      chip: fact("Apple H2 headphone chip", "Chip tai nghe Apple H2"),
+      audio: fact("Active Noise Cancellation, Adaptive Audio, Transparency, Conversation Awareness, Adaptive EQ, personalized Spatial Audio, and studio-quality recording", "Chống Ồn Chủ Động, Âm Thanh Thích Ứng, Xuyên Âm, Nhận Biết Cuộc Hội Thoại, Adaptive EQ, Âm Thanh Không Gian cá nhân hóa và thu âm chuẩn studio"),
+      sensors: fact("Beamforming and inward-facing microphones, optical in-ear sensor, motion and speech accelerometers, force control, and capacitive touch for volume", "Micro định hướng và hướng vào trong, cảm biến quang học trong tai, gia tốc kế chuyển động và giọng nói, điều khiển lực và cảm ứng điện dung để chỉnh âm lượng"),
+      battery: fact("Up to 5 hours per charge and up to 22 hours total with Active Noise Cancellation", "Đến 5 giờ mỗi lần sạc và tổng đến 22 giờ khi bật Chống Ồn Chủ Động"),
+      charging: fact("USB‑C, Apple Watch, or Qi charger; 5 minutes in the case gives about 1 hour", "USB‑C, bộ sạc Apple Watch hoặc Qi; 5 phút trong hộp cho khoảng 1 giờ nghe"),
+      durability: fact("IP57 dust, sweat, and water resistance", "Kháng bụi, mồ hôi và nước IP57"),
+      connectivity: "Bluetooth 5.3",
+      compatibility: fact("Latest Apple operating systems recommended; usable as limited Bluetooth headphones on other devices", "Khuyến nghị hệ điều hành Apple mới nhất; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
+    },
+  },
+  "airpods-4": {
+    introduced: "2024",
+    sourceUrl: "https://support.apple.com/en-us/121203",
+    fields: {
+      finishes: fact("White", "Trắng"),
+      dimensions: fact("Each earbud: 30.2 × 18.3 × 18.1 mm, 4.3 g; USB‑C case: 46.2 × 50.1 × 21.2 mm, 32.3 g", "Mỗi tai nghe: 30,2 × 18,3 × 18,1 mm, 4,3 g; hộp USB‑C: 46,2 × 50,1 × 21,2 mm, 32,3 g"),
+      chip: fact("Apple H2 headphone chip", "Chip tai nghe Apple H2"),
+      audio: fact("Custom high-excursion driver, high dynamic range amplifier, Voice Isolation, Adaptive EQ, and personalized Spatial Audio", "Driver biên độ cao tùy chỉnh, bộ khuếch đại dải tương phản động cao, Tách Lời Nói, Adaptive EQ và Âm Thanh Không Gian cá nhân hóa"),
+      sensors: fact("Dual beamforming microphones, optical in-ear sensor, motion and speech accelerometers, and force sensor", "Hai micro định hướng, cảm biến quang học trong tai, gia tốc kế chuyển động và giọng nói, cảm biến lực"),
+      battery: fact("Up to 5 hours per charge; up to 30 hours with the charging case", "Đến 5 giờ mỗi lần sạc; tổng đến 30 giờ với hộp sạc"),
+      charging: fact("USB‑C; 5 minutes in the case gives about 1 hour", "USB‑C; 5 phút trong hộp cho khoảng 1 giờ nghe"),
+      durability: fact("Earbuds and case are IP54 dust, sweat, and water resistant", "Tai nghe và hộp kháng bụi, mồ hôi và nước IP54"),
+      connectivity: "Bluetooth 5.3",
+      compatibility: fact("Requires supported software for full Apple features; usable as limited Bluetooth headphones on other devices", "Cần phần mềm được hỗ trợ để dùng đầy đủ tính năng Apple; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
+    },
+  },
+  "airpods-4-anc": {
+    introduced: "2024",
+    sourceUrl: "https://support.apple.com/en-us/121204",
+    fields: {
+      finishes: fact("White", "Trắng"),
+      dimensions: fact("Each earbud: 30.2 × 18.3 × 18.1 mm, 4.3 g; wireless charging case with speaker: 46.2 × 50.1 × 21.2 mm, 34.7 g", "Mỗi tai nghe: 30,2 × 18,3 × 18,1 mm, 4,3 g; hộp sạc không dây có loa: 46,2 × 50,1 × 21,2 mm, 34,7 g"),
+      chip: fact("Apple H2 headphone chip", "Chip tai nghe Apple H2"),
+      audio: fact("Active Noise Cancellation, Adaptive Audio, Transparency, Conversation Awareness, Voice Isolation, Adaptive EQ, and personalized Spatial Audio", "Chống Ồn Chủ Động, Âm Thanh Thích Ứng, Xuyên Âm, Nhận Biết Cuộc Hội Thoại, Tách Lời Nói, Adaptive EQ và Âm Thanh Không Gian cá nhân hóa"),
+      sensors: fact("Dual beamforming and inward-facing microphones, optical in-ear sensor, motion and speech accelerometers, and force sensor", "Hai micro định hướng và micro hướng vào trong, cảm biến quang học trong tai, gia tốc kế chuyển động và giọng nói, cảm biến lực"),
+      battery: fact("Up to 4 hours per charge / 20 hours total with ANC; up to 5 hours / 30 hours with noise control off", "Đến 4 giờ mỗi lần sạc / tổng 20 giờ khi bật ANC; đến 5 giờ / tổng 30 giờ khi tắt kiểm soát tiếng ồn"),
+      charging: fact("USB‑C, Apple Watch, or Qi charger; 5 minutes in the case gives about 1 hour", "USB‑C, bộ sạc Apple Watch hoặc Qi; 5 phút trong hộp cho khoảng 1 giờ nghe"),
+      durability: fact("Earbuds and case are IP54 dust, sweat, and water resistant", "Tai nghe và hộp kháng bụi, mồ hôi và nước IP54"),
+      connectivity: "Bluetooth 5.3",
+      compatibility: fact("Requires supported software for full Apple features; usable as limited Bluetooth headphones on other devices", "Cần phần mềm được hỗ trợ để dùng đầy đủ tính năng Apple; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
+    },
+  },
+  "airpods-3": {
+    introduced: "2021",
+    sourceUrl: "https://support.apple.com/en-us/111863",
+    fields: {
+      finishes: fact("White", "Trắng"),
+      dimensions: fact("Each earbud: 30.79 × 18.26 × 19.21 mm, 4.28 g; MagSafe case: 46.4 × 54.4 × 21.38 mm, 37.91 g", "Mỗi tai nghe: 30,79 × 18,26 × 19,21 mm, 4,28 g; hộp MagSafe: 46,4 × 54,4 × 21,38 mm, 37,91 g"),
+      chip: fact("Apple H1 headphone chip", "Chip tai nghe Apple H1"),
+      audio: fact("Custom high-excursion driver, Adaptive EQ, and personalized Spatial Audio with dynamic head tracking", "Driver biên độ cao tùy chỉnh, Adaptive EQ và Âm Thanh Không Gian cá nhân hóa với theo dõi đầu chủ động"),
+      sensors: fact("Dual beamforming microphones, skin-detect sensor, motion and speech accelerometers, and force sensor", "Hai micro định hướng, cảm biến nhận biết da, gia tốc kế chuyển động và giọng nói, cảm biến lực"),
+      battery: fact("Up to 6 hours per charge; up to 30 hours with the charging case", "Đến 6 giờ mỗi lần sạc; tổng đến 30 giờ với hộp sạc"),
+      charging: fact("MagSafe, Qi, or Lightning; 5 minutes in the case gives about 1 hour", "MagSafe, Qi hoặc Lightning; 5 phút trong hộp cho khoảng 1 giờ nghe"),
+      durability: fact("Earbuds and charging case are IPX4 sweat and water resistant", "Tai nghe và hộp sạc kháng mồ hôi và nước IPX4"),
+      connectivity: "Bluetooth 5.0",
+      compatibility: fact("Requires supported software for full Apple features; usable as limited Bluetooth headphones on other devices", "Cần phần mềm được hỗ trợ để dùng đầy đủ tính năng Apple; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
+    },
+  },
+  "airpods-pro-2": {
+    introduced: "2022",
+    sourceUrl: "https://support.apple.com/en-us/111851",
+    fields: {
+      finishes: fact("White; four silicone tip sizes: XS, S, M, L", "Trắng; bốn cỡ nút tai silicone: XS, S, M, L"),
+      dimensions: fact("Each earbud: 30.9 × 21.8 × 24.0 mm, 5.3 g; MagSafe case: 45.2 × 60.6 × 21.7 mm, 50.8 g", "Mỗi tai nghe: 30,9 × 21,8 × 24,0 mm, 5,3 g; hộp MagSafe: 45,2 × 60,6 × 21,7 mm, 50,8 g"),
+      chip: fact("Apple H2 headphone chip; U1 chip in the charging case", "Chip tai nghe Apple H2; chip U1 trong hộp sạc"),
+      audio: fact("Active Noise Cancellation, Adaptive Transparency, Adaptive EQ, and personalized Spatial Audio with dynamic head tracking", "Chống Ồn Chủ Động, Xuyên Âm Thích Ứng, Adaptive EQ và Âm Thanh Không Gian cá nhân hóa với theo dõi đầu chủ động"),
+      sensors: fact("Dual beamforming and inward-facing microphones, skin-detect sensor, motion and speech accelerometers, and touch control", "Hai micro định hướng và micro hướng vào trong, cảm biến nhận biết da, gia tốc kế chuyển động và giọng nói, điều khiển cảm ứng"),
+      battery: fact("Up to 6 hours per charge; up to 30 hours with the charging case", "Đến 6 giờ mỗi lần sạc; tổng đến 30 giờ với hộp sạc"),
+      charging: fact("MagSafe, Apple Watch, Qi, or Lightning; 5 minutes in the case gives about 1 hour", "MagSafe, bộ sạc Apple Watch, Qi hoặc Lightning; 5 phút trong hộp cho khoảng 1 giờ nghe"),
+      durability: fact("Earbuds and charging case are IPX4 sweat and water resistant", "Tai nghe và hộp sạc kháng mồ hôi và nước IPX4"),
+      connectivity: "Bluetooth 5.3",
+      compatibility: fact("Requires supported software for full Apple features; hearing features vary by region", "Cần phần mềm được hỗ trợ để dùng đầy đủ tính năng Apple; tính năng thính giác thay đổi theo khu vực"),
+    },
+  },
+  "airpods-pro": {
+    introduced: "2019",
+    sourceUrl: "https://support.apple.com/en-us/111861",
+    fields: {
+      finishes: fact("White; three silicone tip sizes: S, M, L", "Trắng; ba cỡ nút tai silicone: S, M, L"),
+      dimensions: fact("Each earbud: 30.9 × 21.8 × 24.0 mm, 5.4 g; wireless charging case: 45.2 × 60.6 × 21.7 mm, 45.6 g", "Mỗi tai nghe: 30,9 × 21,8 × 24,0 mm, 5,4 g; hộp sạc không dây: 45,2 × 60,6 × 21,7 mm, 45,6 g"),
+      chip: fact("Apple H1 headphone chip", "Chip tai nghe Apple H1"),
+      audio: fact("Active Noise Cancellation, Transparency, Adaptive EQ, and vent system for pressure equalization", "Chống Ồn Chủ Động, Xuyên Âm, Adaptive EQ và hệ thống thông khí cân bằng áp suất"),
+      sensors: fact("Dual beamforming and inward-facing microphones, dual optical sensors, motion and speech accelerometers, and force sensor", "Hai micro định hướng và micro hướng vào trong, hai cảm biến quang học, gia tốc kế chuyển động và giọng nói, cảm biến lực"),
+      battery: fact("Up to 4.5 hours per charge; more than 24 hours with the charging case", "Đến 4,5 giờ mỗi lần sạc; hơn 24 giờ với hộp sạc"),
+      charging: fact("Qi or Lightning; 5 minutes in the case gives about 1 hour", "Qi hoặc Lightning; 5 phút trong hộp cho khoảng 1 giờ nghe"),
+      durability: fact("Earbuds are IPX4 sweat and water resistant; the charging case is not rated", "Tai nghe kháng mồ hôi và nước IPX4; hộp sạc không có chuẩn kháng nước"),
+      connectivity: "Bluetooth 5.0",
+      compatibility: fact("Requires supported software for full Apple features; usable as limited Bluetooth headphones on other devices", "Cần phần mềm được hỗ trợ để dùng đầy đủ tính năng Apple; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
+    },
+  },
+  "airpods-max": {
+    introduced: "2020",
+    sourceUrl: "https://support.apple.com/en-us/111858",
+    fields: {
+      finishes: fact("Silver, Space Gray, Sky Blue, Pink, Green", "Bạc, Xám Không Gian, Xanh Da Trời, Hồng, Xanh Lá"),
+      dimensions: fact("187.3 × 168.6 × 83.4 mm including cushions; 384.8 g; Smart Case 134.5 g", "187,3 × 168,6 × 83,4 mm gồm đệm tai; 384,8 g; Smart Case 134,5 g"),
+      chip: fact("Apple H1 headphone chip in each ear cup", "Chip tai nghe Apple H1 trong mỗi chụp tai"),
+      audio: fact("Apple dynamic driver, Active Noise Cancellation, Transparency, Adaptive EQ, and Spatial Audio with dynamic head tracking", "Driver động Apple, Chống Ồn Chủ Động, Xuyên Âm, Adaptive EQ và Âm Thanh Không Gian với theo dõi đầu chủ động"),
+      sensors: fact("Optical, position, case-detect and motion sensors in each cup; gyroscope in left cup; nine microphones", "Cảm biến quang học, vị trí, nhận biết hộp và chuyển động trong mỗi chụp; con quay hồi chuyển ở chụp trái; chín micro"),
+      battery: fact("Up to 20 hours with Active Noise Cancellation and Spatial Audio enabled", "Đến 20 giờ khi bật Chống Ồn Chủ Động và Âm Thanh Không Gian"),
+      charging: fact("Lightning; 5 minutes of charge gives about 1.5 hours; Smart Case enables ultra-low-power storage", "Lightning; sạc 5 phút cho khoảng 1,5 giờ; Smart Case kích hoạt trạng thái lưu trữ siêu tiết kiệm điện"),
+      connectivity: "Bluetooth 5.0",
+      compatibility: fact("Requires supported software for full Apple features; usable as limited Bluetooth headphones on other devices", "Cần phần mềm được hỗ trợ để dùng đầy đủ tính năng Apple; vẫn dùng được như tai nghe Bluetooth với tính năng giới hạn trên thiết bị khác"),
+    },
+  },
+} as const satisfies Pick<ProductTechnicalSpecCatalog, HistoricalAirPodsModel>;

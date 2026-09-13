@@ -26,14 +26,35 @@ export type IpadModel =
   | "ipad-air-m4"
   | "ipad-a16"
   | "ipad-mini-a17-pro";
-export type AppleWatchModel =
-  | "apple-watch-series-11"
-  | "apple-watch-ultra-3"
-  | "apple-watch-se-3";
-export type AirPodsModel =
-  | "airpods-5"
-  | "airpods-pro-3"
-  | "airpods-max-2";
+export const appleWatchModelIds = [
+  "apple-watch-series-11",
+  "apple-watch-series-10",
+  "apple-watch-series-9",
+  "apple-watch-series-8",
+  "apple-watch-series-7",
+  "apple-watch-series-6",
+  "apple-watch-series-5",
+  "apple-watch-series-3",
+  "apple-watch-ultra-3",
+  "apple-watch-ultra-2",
+  "apple-watch-ultra",
+  "apple-watch-se-3",
+  "apple-watch-se",
+] as const;
+export type AppleWatchModel = (typeof appleWatchModelIds)[number];
+export const airPodsModelIds = [
+  "airpods-5",
+  "airpods-5-wireless",
+  "airpods-4",
+  "airpods-4-anc",
+  "airpods-3",
+  "airpods-pro-3",
+  "airpods-pro-2",
+  "airpods-pro",
+  "airpods-max-2",
+  "airpods-max",
+] as const;
+export type AirPodsModel = (typeof airPodsModelIds)[number];
 export type MacModel =
   | "macbook-air-m5"
   | "macbook-air-15-m5"
@@ -78,9 +99,11 @@ export type Finish =
   | "space-black"
   | "deep-purple"
   | "rose-gold"
+  | "starlight"
   | "midnight"
   | "ultramarine"
   | "blue"
+  | "green"
   | "purple"
   | "pink"
   | "white";
@@ -284,9 +307,90 @@ export const productCatalog: Record<Model, ProductDefinition> = {
     sceneRotationX: 1.92,
     sceneRotationY: -0.18,
   },
+  "apple-watch-series-10": {
+    label: "Apple Watch Series 10",
+    shortLabel: "Series 10",
+    defaultFinish: "black",
+    isFoldable: false,
+    sceneHeight: 6.4,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-series-9": {
+    label: "Apple Watch Series 9",
+    shortLabel: "Series 9",
+    defaultFinish: "starlight",
+    isFoldable: false,
+    sceneHeight: 6.4,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-series-8": {
+    label: "Apple Watch Series 8",
+    shortLabel: "Series 8",
+    defaultFinish: "starlight",
+    isFoldable: false,
+    sceneHeight: 6.4,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-series-7": {
+    label: "Apple Watch Series 7",
+    shortLabel: "Series 7",
+    defaultFinish: "midnight",
+    isFoldable: false,
+    sceneHeight: 6.4,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-series-6": {
+    label: "Apple Watch Series 6",
+    shortLabel: "Series 6",
+    defaultFinish: "silver",
+    isFoldable: false,
+    sceneHeight: 6.4,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-series-5": {
+    label: "Apple Watch Series 5",
+    shortLabel: "Series 5",
+    defaultFinish: "silver",
+    isFoldable: false,
+    sceneHeight: 6.4,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-series-3": {
+    label: "Apple Watch Series 3",
+    shortLabel: "Series 3",
+    defaultFinish: "silver",
+    isFoldable: false,
+    sceneHeight: 6.35,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
   "apple-watch-ultra-3": {
     label: "Apple Watch Ultra 3",
     shortLabel: "Ultra 3",
+    defaultFinish: "natural-titanium",
+    isFoldable: false,
+    sceneHeight: 6.55,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-ultra-2": {
+    label: "Apple Watch Ultra 2",
+    shortLabel: "Ultra 2",
+    defaultFinish: "black",
+    isFoldable: false,
+    sceneHeight: 6.55,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
+  "apple-watch-ultra": {
+    label: "Apple Watch Ultra",
+    shortLabel: "Ultra",
     defaultFinish: "natural-titanium",
     isFoldable: false,
     sceneHeight: 6.55,
@@ -302,9 +406,50 @@ export const productCatalog: Record<Model, ProductDefinition> = {
     sceneRotationX: 1.92,
     sceneRotationY: -0.18,
   },
+  "apple-watch-se": {
+    label: "Apple Watch SE (1st generation)",
+    shortLabel: "SE 1",
+    defaultFinish: "silver",
+    isFoldable: false,
+    sceneHeight: 6.3,
+    sceneRotationX: 1.92,
+    sceneRotationY: -0.18,
+  },
   "airpods-5": {
     label: "AirPods 5",
     shortLabel: "AirPods 5",
+    defaultFinish: "white",
+    isFoldable: false,
+    sceneHeight: 6.1,
+    sceneRotationY: 0.18,
+  },
+  "airpods-5-wireless": {
+    label: "AirPods 5 with Wireless Charging Case",
+    shortLabel: "5 Wireless",
+    defaultFinish: "white",
+    isFoldable: false,
+    sceneHeight: 6.1,
+    sceneRotationY: 0.18,
+  },
+  "airpods-4": {
+    label: "AirPods 4",
+    shortLabel: "AirPods 4",
+    defaultFinish: "white",
+    isFoldable: false,
+    sceneHeight: 6.1,
+    sceneRotationY: 0.18,
+  },
+  "airpods-4-anc": {
+    label: "AirPods 4 with Active Noise Cancellation",
+    shortLabel: "4 ANC",
+    defaultFinish: "white",
+    isFoldable: false,
+    sceneHeight: 6.1,
+    sceneRotationY: 0.18,
+  },
+  "airpods-3": {
+    label: "AirPods 3",
+    shortLabel: "AirPods 3",
     defaultFinish: "white",
     isFoldable: false,
     sceneHeight: 6.1,
@@ -318,10 +463,35 @@ export const productCatalog: Record<Model, ProductDefinition> = {
     sceneHeight: 6.1,
     sceneRotationY: 0.18,
   },
+  "airpods-pro-2": {
+    label: "AirPods Pro 2",
+    shortLabel: "Pro 2",
+    defaultFinish: "white",
+    isFoldable: false,
+    sceneHeight: 6.1,
+    sceneRotationY: 0.18,
+  },
+  "airpods-pro": {
+    label: "AirPods Pro (1st generation)",
+    shortLabel: "Pro 1",
+    defaultFinish: "white",
+    isFoldable: false,
+    sceneHeight: 6.1,
+    sceneRotationY: 0.18,
+    sceneRotationZ: Math.PI / 2,
+  },
   "airpods-max-2": {
     label: "AirPods Max 2",
     shortLabel: "Max 2",
     defaultFinish: "midnight",
+    isFoldable: false,
+    sceneHeight: 6.5,
+    sceneRotationY: 0.18,
+  },
+  "airpods-max": {
+    label: "AirPods Max (1st generation)",
+    shortLabel: "Max 1",
+    defaultFinish: "green",
     isFoldable: false,
     sceneHeight: 6.5,
     sceneRotationY: 0.18,
@@ -492,37 +662,52 @@ export const seriesCatalog: Record<Series, SeriesDefinition> = {
     label: "Apple Watch Series",
     shortLabel: "Series",
     defaultModel: "apple-watch-series-11",
-    models: ["apple-watch-series-11"],
+    models: [
+      "apple-watch-series-11",
+      "apple-watch-series-10",
+      "apple-watch-series-9",
+      "apple-watch-series-8",
+      "apple-watch-series-7",
+      "apple-watch-series-6",
+      "apple-watch-series-5",
+      "apple-watch-series-3",
+    ],
   },
   "apple-watch-ultra": {
     label: "Apple Watch Ultra",
     shortLabel: "Ultra",
     defaultModel: "apple-watch-ultra-3",
-    models: ["apple-watch-ultra-3"],
+    models: ["apple-watch-ultra-3", "apple-watch-ultra-2", "apple-watch-ultra"],
   },
   "apple-watch-se": {
     label: "Apple Watch SE",
     shortLabel: "SE",
     defaultModel: "apple-watch-se-3",
-    models: ["apple-watch-se-3"],
+    models: ["apple-watch-se-3", "apple-watch-se"],
   },
   airpods: {
     label: "AirPods",
     shortLabel: "AirPods",
     defaultModel: "airpods-5",
-    models: ["airpods-5"],
+    models: [
+      "airpods-5",
+      "airpods-5-wireless",
+      "airpods-4",
+      "airpods-4-anc",
+      "airpods-3",
+    ],
   },
   "airpods-pro": {
     label: "AirPods Pro",
     shortLabel: "Pro",
     defaultModel: "airpods-pro-3",
-    models: ["airpods-pro-3"],
+    models: ["airpods-pro-3", "airpods-pro-2", "airpods-pro"],
   },
   "airpods-max": {
     label: "AirPods Max",
     shortLabel: "Max",
     defaultModel: "airpods-max-2",
-    models: ["airpods-max-2"],
+    models: ["airpods-max-2", "airpods-max"],
   },
   "macbook-air": {
     label: "MacBook Air",
@@ -588,9 +773,11 @@ export const finishes: Record<Finish, { name: string; color: string; accent: str
   "space-black": { name: "Space Black", color: "#3a3a3c", accent: "#a5a5aa" },
   "deep-purple": { name: "Deep Purple", color: "#514f59", accent: "#aaa5b3" },
   "rose-gold": { name: "Rose Gold", color: "#c98978", accent: "#f2c4b7" },
+  starlight: { name: "Starlight", color: "#d8d0bf", accent: "#fff8e8" },
   midnight: { name: "Midnight", color: "#20252d", accent: "#858f9f" },
   ultramarine: { name: "Ultramarine", color: "#5463c6", accent: "#a8b0ff" },
   blue: { name: "Blue", color: "#9eb7c6", accent: "#dceef7" },
+  green: { name: "Green", color: "#63766d", accent: "#b7d2c4" },
   purple: { name: "Purple", color: "#aaa5bd", accent: "#e8e4f3" },
   pink: { name: "Pink", color: "#e8c2c8", accent: "#fff0f2" },
   white: { name: "White", color: "#f2f1ed", accent: "#ffffff" },
@@ -622,11 +809,28 @@ export const modelFinishes: Record<Model, ReadonlyArray<Finish>> = {
   "ipad-a16": ["pink"],
   "ipad-mini-a17-pro": ["purple"],
   "apple-watch-series-11": ["rose-gold"],
+  "apple-watch-series-10": ["black"],
+  "apple-watch-series-9": ["starlight"],
+  "apple-watch-series-8": ["starlight"],
+  "apple-watch-series-7": ["midnight"],
+  "apple-watch-series-6": ["silver"],
+  "apple-watch-series-5": ["silver"],
+  "apple-watch-series-3": ["silver"],
   "apple-watch-ultra-3": ["natural-titanium"],
+  "apple-watch-ultra-2": ["black"],
+  "apple-watch-ultra": ["natural-titanium"],
   "apple-watch-se-3": ["midnight"],
+  "apple-watch-se": ["silver"],
   "airpods-5": ["white"],
+  "airpods-5-wireless": ["white"],
+  "airpods-4": ["white"],
+  "airpods-4-anc": ["white"],
+  "airpods-3": ["white"],
   "airpods-pro-3": ["white"],
+  "airpods-pro-2": ["white"],
+  "airpods-pro": ["white"],
   "airpods-max-2": ["midnight"],
+  "airpods-max": ["green"],
   "macbook-air-m5": ["sky-blue"],
   "macbook-air-15-m5": ["sky-blue"],
   "macbook-pro-m5": ["space-black"],
@@ -680,15 +884,11 @@ export function isIpadModel(model: Model): model is IpadModel {
 }
 
 export function isAppleWatchModel(model: Model): model is AppleWatchModel {
-  return model === "apple-watch-series-11"
-    || model === "apple-watch-ultra-3"
-    || model === "apple-watch-se-3";
+  return appleWatchModelIds.includes(model as AppleWatchModel);
 }
 
 export function isAirPodsModel(model: Model): model is AirPodsModel {
-  return model === "airpods-5"
-    || model === "airpods-pro-3"
-    || model === "airpods-max-2";
+  return airPodsModelIds.includes(model as AirPodsModel);
 }
 
 export function isMacModel(model: Model): model is MacModel {
