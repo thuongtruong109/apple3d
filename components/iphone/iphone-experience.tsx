@@ -13,6 +13,7 @@ import {
 } from "./product-category-data";
 import { ProductCategoryPreview } from "./product-category-preview";
 import { ProductSelect } from "./product-select";
+import { ProductTechnicalSpecs } from "./product-technical-specs";
 import { SegmentedControl } from "./segmented-control";
 import { SeriesSelect } from "./series-select";
 import { getProductCopy } from "./product-copy";
@@ -289,6 +290,14 @@ export function AppleProductExperience() {
           </article>
         </div>}
       </section>
+
+      {hasCatalog && (
+        <ProductTechnicalSpecs
+          language={language}
+          model={model}
+          productName={active.name}
+        />
+      )}
 
       <ExperienceFooter content={content.sources} />
     </main>

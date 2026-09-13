@@ -773,6 +773,188 @@ a {
   background: #fff;
 }
 
+.technical-profile {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 100rem);
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 5vw, 5rem);
+  border-top: 1px solid #ffffff17;
+  background:
+    radial-gradient(circle at 85% 6%, #9e294425, transparent 26rem),
+    #080709;
+  color: #f7f3f5;
+}
+
+.technical-profile__heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.technical-profile__eyebrow {
+  margin: 0 0 1rem;
+  color: #c37384;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.technical-profile__heading h2 {
+  max-width: 13ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  font-weight: 520;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+  text-wrap: balance;
+}
+
+.technical-profile__heading > div:first-child > p:last-child {
+  max-width: 42rem;
+  margin: 1.5rem 0 0;
+  color: #aaa6ad;
+  line-height: 1.65;
+}
+
+.technical-profile__verification {
+  display: flex;
+  max-width: 18rem;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #ffffff1a;
+  border-radius: 1rem;
+  background: #ffffff08;
+  color: #e9e2e5;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.technical-profile__verification svg {
+  width: 1.25rem;
+  flex: 0 0 auto;
+  color: #c37384;
+}
+
+.technical-profile__verification small {
+  display: block;
+  margin-top: 0.2rem;
+  color: #7f7980;
+  font-size: 0.68rem;
+}
+
+.technical-profile__identity {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0 1.25rem;
+}
+
+.technical-profile__identity strong {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  letter-spacing: -0.03em;
+}
+
+.technical-profile__identity span {
+  color: #7f7980;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.technical-profile__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #ffffff18;
+  border-radius: 1.4rem;
+  background: #ffffff18;
+}
+
+.technical-profile__group {
+  min-width: 0;
+  padding: clamp(1.35rem, 3vw, 2.4rem);
+  background: #0b0a0d;
+}
+
+.technical-profile__group h3 {
+  margin: 0 0 1.7rem;
+  color: #c37384;
+  font-size: 0.7rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.technical-profile__group dl,
+.technical-profile__group dd {
+  margin: 0;
+}
+
+.technical-profile__group dl > div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.36fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ffffff10;
+}
+
+.technical-profile__group dt {
+  color: #777178;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.technical-profile__group dd {
+  overflow-wrap: anywhere;
+  color: #d7d0d4;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.technical-profile__source {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.75rem;
+  color: #777178;
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
+
+.technical-profile__source p {
+  max-width: 52rem;
+  margin: 0;
+}
+
+.technical-profile__source a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.45rem;
+  color: #d99aaa;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.technical-profile__source a:hover {
+  color: #fff;
+}
+
+.technical-profile__source svg {
+  width: 0.85rem;
+}
+
 .experience-footer {
   position: relative;
   overflow: hidden;
@@ -1386,6 +1568,20 @@ a {
 }
 
 @media (max-width: 760px) {
+  .technical-profile__heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .technical-profile__verification {
+    max-width: none;
+  }
+  .technical-profile__grid {
+    grid-template-columns: 1fr;
+  }
+  .technical-profile__source {
+    flex-direction: column;
+  }
   .experience-header {
     grid-template-columns: 1fr auto;
     min-height: 4rem;
@@ -1518,6 +1714,14 @@ a {
 }
 
 @media (max-width: 480px) {
+  .technical-profile__identity {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .technical-profile__group dl > div {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
   .language-trigger {
     min-width: 3.8rem;
     padding-inline: 0.65rem;
