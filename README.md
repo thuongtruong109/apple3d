@@ -5,12 +5,12 @@ Cloudflare runtime. The product selector separates iPhone, iPad, Apple Watch,
 Mac, AirPods, and Apple Vision into independent catalog boundaries.
 
 The iPhone catalog includes iPhone 18 Pro, iPhone Duo, and the complete iPhone
-17, iPhone 16, iPhone 15, and iPhone 14 families. The iPad catalog includes iPad Pro M5,
-iPad Air M4, iPad A16, and iPad mini A17 Pro. The Apple Watch catalog includes
+17, iPhone 16, iPhone 15, and iPhone 14 families. The iPad catalog includes the
+13-inch iPad Pro M5, 13-inch iPad Air M4, iPad A16, and iPad mini A17 Pro. The Apple Watch catalog includes
 Apple Watch Series 11, Apple Watch Ultra 3, and Apple Watch SE 3. The AirPods
 catalog includes AirPods 5, AirPods Pro 3, and AirPods Max 2. Their browser-ready
 models are converted from Apple's public AR assets. The Mac catalog includes
-MacBook Air M5, MacBook Pro M5, iMac M4, Mac mini M6, Mac Studio M5, and the
+the 13- and 15-inch MacBook Air M5, 14-inch MacBook Pro M5, iMac M4, Mac mini M6, Mac Studio M5, and the
 final Mac Pro with M2 Ultra. Apple Vision exposes its planned series and can
 receive dedicated model, finish, copy, and AR modules without coupling it to
 the existing catalogs.

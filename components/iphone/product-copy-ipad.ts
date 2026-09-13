@@ -5,28 +5,28 @@ import type { ProductCopy } from "./product-copy-types";
 const ipadProductCopy: Record<ContentLanguage, Record<IpadModel, ProductCopy>> = {
   en: {
     "ipad-pro-m5": {
-      name: "iPad Pro",
+      name: "iPad Pro 13″",
       eyebrow: "POWER, MADE PORTABLE.",
       intro: "M5 performance, an Ultra Retina XDR display, and an exceptionally thin aluminum design for ambitious creative work.",
-      display: "11″ / 13″ XDR",
+      display: "13″ Ultra Retina XDR",
       camera: "12MP Wide",
       battery: "10 hours",
       designTitle: "Pro capability. Impossibly thin.",
-      designBody: "The 13-inch model measures just 5.1 mm thin. Its recycled aluminum enclosure stays light enough to take a complete studio anywhere.",
+      designBody: "At just 5.1 mm thin and 579 g for the Wi‑Fi model, its recycled aluminum enclosure stays light enough to take a complete studio anywhere.",
       cameraTitle: "Capture, scan, and create.",
       cameraBody: "A 12MP Wide camera records 4K ProRes, while the landscape 12MP Center Stage camera keeps calls naturally framed.",
       performanceTitle: "M5. A giant leap for AI.",
       performanceBody: "A next-generation CPU, GPU Neural Accelerators, and a faster media engine accelerate demanding graphics, AI, and video workflows.",
     },
     "ipad-air-m4": {
-      name: "iPad Air",
+      name: "iPad Air 13″",
       eyebrow: "FRESH AIR. SERIOUS POWER.",
-      intro: "The M4 chip, two versatile sizes, Apple Intelligence, and Apple Pencil Pro support in a thin, colorful design.",
-      display: "11″ / 13″ Retina",
+      intro: "A spacious 13-inch Liquid Retina display, the M4 chip, Apple Intelligence, and Apple Pencil Pro support in a thin, colorful design.",
+      display: "13″ Liquid Retina",
       camera: "12MP Wide",
       battery: "10 hours",
-      designTitle: "Two sizes. Four colors.",
-      designBody: "Choose an ultraportable 11-inch canvas or a spacious 13-inch display, both in a light aluminum enclosure built for everyday mobility.",
+      designTitle: "A larger canvas. Four colors.",
+      designBody: "The 13-inch display sits in a 6.1 mm aluminum enclosure weighing 616 g for the Wi‑Fi model, built for a bigger view without giving up mobility.",
       cameraTitle: "Centered from every angle.",
       cameraBody: "The landscape 12MP Center Stage camera follows the conversation, while the rear 12MP Wide camera captures detailed photos and 4K video.",
       performanceTitle: "M4 moves everything forward.",
@@ -63,28 +63,28 @@ const ipadProductCopy: Record<ContentLanguage, Record<IpadModel, ProductCopy>> =
   },
   vi: {
     "ipad-pro-m5": {
-      name: "iPad Pro",
+      name: "iPad Pro 13″",
       eyebrow: "SỨC MẠNH PRO. LUÔN BÊN BẠN.",
       intro: "Hiệu năng M5, màn hình Ultra Retina XDR và thiết kế nhôm siêu mỏng dành cho những quy trình sáng tạo đầy tham vọng.",
-      display: "11″ / 13″ XDR",
+      display: "13″ Ultra Retina XDR",
       camera: "Góc Rộng 12MP",
       battery: "10 giờ",
       designTitle: "Năng lực Pro. Mỏng khó tin.",
-      designBody: "Phiên bản 13 inch chỉ mỏng 5,1 mm. Vỏ nhôm tái chế đủ nhẹ để bạn mang cả studio đi khắp nơi.",
+      designBody: "Chỉ mỏng 5,1 mm và nặng 579 g ở bản Wi‑Fi, vỏ nhôm tái chế đủ nhẹ để bạn mang cả studio đi khắp nơi.",
       cameraTitle: "Ghi hình, quét và sáng tạo.",
       cameraBody: "Camera Góc Rộng 12MP quay 4K ProRes, còn camera Center Stage 12MP nằm ngang luôn giữ bạn ở giữa khung hình.",
       performanceTitle: "M5. Bước tiến lớn cho AI.",
       performanceBody: "CPU thế hệ mới, Neural Accelerator trong GPU và Media Engine nhanh hơn tăng tốc đồ họa, AI và video chuyên nghiệp.",
     },
     "ipad-air-m4": {
-      name: "iPad Air",
+      name: "iPad Air 13″",
       eyebrow: "NHẸ NHÀNG. MẠNH MẼ.",
-      intro: "Chip M4, hai kích thước linh hoạt, Apple Intelligence và Apple Pencil Pro trong một thiết kế mỏng nhẹ, đầy màu sắc.",
-      display: "11″ / 13″ Retina",
+      intro: "Màn hình Liquid Retina 13 inch rộng rãi, chip M4, Apple Intelligence và Apple Pencil Pro trong một thiết kế mỏng nhẹ, đầy màu sắc.",
+      display: "13″ Liquid Retina",
       camera: "Góc Rộng 12MP",
       battery: "10 giờ",
-      designTitle: "Hai kích thước. Bốn màu sắc.",
-      designBody: "Chọn khung vẽ 11 inch cơ động hoặc màn hình 13 inch rộng rãi, cùng thiết kế nhôm nhẹ để luôn sẵn sàng di chuyển.",
+      designTitle: "Không gian lớn hơn. Bốn màu sắc.",
+      designBody: "Màn hình 13 inch nằm trong vỏ nhôm mỏng 6,1 mm, nặng 616 g ở bản Wi‑Fi, cho góc nhìn rộng mà vẫn dễ dàng mang theo.",
       cameraTitle: "Luôn ở giữa mọi góc nhìn.",
       cameraBody: "Camera Center Stage 12MP nằm ngang bám theo cuộc trò chuyện, còn camera sau 12MP ghi ảnh chi tiết và video 4K.",
       performanceTitle: "M4 đưa mọi việc tiến xa.",
@@ -121,10 +121,10 @@ const ipadProductCopy: Record<ContentLanguage, Record<IpadModel, ProductCopy>> =
   },
   pt: {
     "ipad-pro-m5": {
-      name: "iPad Pro", eyebrow: "POTÊNCIA PRO. SEMPRE COM VOCÊ.", intro: "Desempenho M5, tela Ultra Retina XDR e estrutura de alumínio ultrafina para fluxos criativos exigentes.", display: "11″ / 13″ XDR", camera: "Grande-angular 12 MP", battery: "10 horas", designTitle: "Capacidade Pro. Incrivelmente fino.", designBody: "O modelo de 13 polegadas tem apenas 5,1 mm e leva um estúdio completo numa estrutura leve de alumínio reciclado.", cameraTitle: "Capture, digitalize e crie.", cameraBody: "A câmera de 12 MP grava ProRes 4K, enquanto a Center Stage horizontal mantém as chamadas enquadradas.", performanceTitle: "M5. Um salto enorme para a IA.", performanceBody: "CPU, aceleradores neurais na GPU e Media Engine avançados aceleram gráficos, IA e vídeo profissional.",
+      name: "iPad Pro 13″", eyebrow: "POTÊNCIA PRO. SEMPRE COM VOCÊ.", intro: "Desempenho M5, tela Ultra Retina XDR de 13 polegadas e estrutura de alumínio ultrafina para fluxos criativos exigentes.", display: "13″ Ultra Retina XDR", camera: "Grande-angular 12 MP", battery: "10 horas", designTitle: "Capacidade Pro. Incrivelmente fino.", designBody: "Com apenas 5,1 mm e 579 g no modelo Wi‑Fi, a estrutura leve de alumínio reciclado leva um estúdio completo para qualquer lugar.", cameraTitle: "Capture, digitalize e crie.", cameraBody: "A câmera de 12 MP grava ProRes 4K, enquanto a Center Stage horizontal mantém as chamadas enquadradas.", performanceTitle: "M5. Um salto enorme para a IA.", performanceBody: "CPU, aceleradores neurais na GPU e Media Engine avançados aceleram gráficos, IA e vídeo profissional.",
     },
     "ipad-air-m4": {
-      name: "iPad Air", eyebrow: "LEVE. E MUITO POTENTE.", intro: "Chip M4, dois tamanhos, Apple Intelligence e Apple Pencil Pro num design fino e colorido.", display: "11″ / 13″ Retina", camera: "Grande-angular 12 MP", battery: "10 horas", designTitle: "Dois tamanhos. Quatro cores.", designBody: "Escolha a mobilidade de 11 polegadas ou o espaço de 13 polegadas, ambos numa estrutura leve de alumínio.", cameraTitle: "Sempre no centro.", cameraBody: "A Center Stage horizontal acompanha a conversa e a câmera traseira de 12 MP captura fotos detalhadas e vídeo 4K.", performanceTitle: "M4 faz tudo avançar.", performanceBody: "CPU rápida, ray tracing e Neural Engine de 16 núcleos dão fluidez à criação e à IA no aparelho.",
+      name: "iPad Air 13″", eyebrow: "LEVE. E MUITO POTENTE.", intro: "Tela Liquid Retina de 13 polegadas, chip M4, Apple Intelligence e Apple Pencil Pro num design fino e colorido.", display: "13″ Liquid Retina", camera: "Grande-angular 12 MP", battery: "10 horas", designTitle: "Tela maior. Quatro cores.", designBody: "A tela de 13 polegadas fica numa estrutura de alumínio com 6,1 mm e 616 g no modelo Wi‑Fi, ampliando a vista sem perder mobilidade.", cameraTitle: "Sempre no centro.", cameraBody: "A Center Stage horizontal acompanha a conversa e a câmera traseira de 12 MP captura fotos detalhadas e vídeo 4K.", performanceTitle: "M4 faz tudo avançar.", performanceBody: "CPU rápida, ray tracing e Neural Engine de 16 núcleos dão fluidez à criação e à IA no aparelho.",
     },
     "ipad-a16": {
       name: "iPad", eyebrow: "COLORIDO. CAPAZ. DIVERTIDO.", intro: "Tela Liquid Retina de 11 polegadas, chip A16 e design de ponta a ponta para trabalhar, jogar e criar.", display: "11″ Retina", camera: "Grande-angular 12 MP", battery: "10 horas", designTitle: "Tudo tela. Toda cor.", designBody: "A estrutura fina de alumínio combina quatro cores com Touch ID e USB-C.", cameraTitle: "Nítido e centralizado.", cameraBody: "A câmera de 12 MP grava em 4K e a Center Stage horizontal torna as chamadas mais naturais.", performanceTitle: "A16. Mais possibilidades.", performanceBody: "O eficiente A16 mantém apps, jogos, multitarefa e criação responsivos ao longo do dia.",
@@ -135,10 +135,10 @@ const ipadProductCopy: Record<ContentLanguage, Record<IpadModel, ProductCopy>> =
   },
   es: {
     "ipad-pro-m5": {
-      name: "iPad Pro", eyebrow: "POTENCIA PRO. SIEMPRE CONTIGO.", intro: "Rendimiento M5, pantalla Ultra Retina XDR y estructura de aluminio ultrafina para flujos creativos exigentes.", display: "11″ / 13″ XDR", camera: "Gran angular 12 MP", battery: "10 horas", designTitle: "Capacidad Pro. Increíblemente fino.", designBody: "El modelo de 13 pulgadas mide solo 5,1 mm y lleva un estudio completo en una estructura ligera de aluminio reciclado.", cameraTitle: "Captura, escanea y crea.", cameraBody: "La cámara de 12 MP graba ProRes 4K y la cámara Center Stage horizontal mantiene las llamadas bien encuadradas.", performanceTitle: "M5. Un gran salto para la IA.", performanceBody: "La nueva CPU, los aceleradores neuronales de la GPU y el Media Engine aceleran gráficos, IA y vídeo profesional.",
+      name: "iPad Pro 13″", eyebrow: "POTENCIA PRO. SIEMPRE CONTIGO.", intro: "Rendimiento M5, pantalla Ultra Retina XDR de 13 pulgadas y estructura de aluminio ultrafina para flujos creativos exigentes.", display: "13″ Ultra Retina XDR", camera: "Gran angular 12 MP", battery: "10 horas", designTitle: "Capacidad Pro. Increíblemente fino.", designBody: "Con solo 5,1 mm y 579 g en el modelo Wi‑Fi, la ligera estructura de aluminio reciclado lleva un estudio completo a cualquier parte.", cameraTitle: "Captura, escanea y crea.", cameraBody: "La cámara de 12 MP graba ProRes 4K y la cámara Center Stage horizontal mantiene las llamadas bien encuadradas.", performanceTitle: "M5. Un gran salto para la IA.", performanceBody: "La nueva CPU, los aceleradores neuronales de la GPU y el Media Engine aceleran gráficos, IA y vídeo profesional.",
     },
     "ipad-air-m4": {
-      name: "iPad Air", eyebrow: "LIGERO. MUY POTENTE.", intro: "Chip M4, dos tamaños, Apple Intelligence y Apple Pencil Pro en un diseño fino y colorido.", display: "11″ / 13″ Retina", camera: "Gran angular 12 MP", battery: "10 horas", designTitle: "Dos tamaños. Cuatro colores.", designBody: "Elige la movilidad de 11 pulgadas o el espacio de 13 pulgadas, ambos en una ligera estructura de aluminio.", cameraTitle: "Siempre en el centro.", cameraBody: "Center Stage horizontal sigue la conversación y la cámara trasera de 12 MP captura fotos detalladas y vídeo 4K.", performanceTitle: "M4 lo impulsa todo.", performanceBody: "CPU rápida, ray tracing y Neural Engine de 16 núcleos aportan fluidez creativa e IA en el dispositivo.",
+      name: "iPad Air 13″", eyebrow: "LIGERO. MUY POTENTE.", intro: "Pantalla Liquid Retina de 13 pulgadas, chip M4, Apple Intelligence y Apple Pencil Pro en un diseño fino y colorido.", display: "13″ Liquid Retina", camera: "Gran angular 12 MP", battery: "10 horas", designTitle: "Más espacio. Cuatro colores.", designBody: "La pantalla de 13 pulgadas cabe en una estructura de aluminio de 6,1 mm y 616 g en el modelo Wi‑Fi, amplia sin perder movilidad.", cameraTitle: "Siempre en el centro.", cameraBody: "Center Stage horizontal sigue la conversación y la cámara trasera de 12 MP captura fotos detalladas y vídeo 4K.", performanceTitle: "M4 lo impulsa todo.", performanceBody: "CPU rápida, ray tracing y Neural Engine de 16 núcleos aportan fluidez creativa e IA en el dispositivo.",
     },
     "ipad-a16": {
       name: "iPad", eyebrow: "COLORIDO. CAPAZ. DIVERTIDO.", intro: "Pantalla Liquid Retina de 11 pulgadas, chip A16 y diseño todo pantalla para trabajar, jugar y crear.", display: "11″ Retina", camera: "Gran angular 12 MP", battery: "10 horas", designTitle: "Todo pantalla. Todo color.", designBody: "La fina estructura de aluminio combina cuatro colores con Touch ID y USB-C.", cameraTitle: "Nítido y centrado.", cameraBody: "La cámara de 12 MP graba vídeo 4K y Center Stage horizontal hace que las llamadas sean más naturales.", performanceTitle: "A16. Más por disfrutar.", performanceBody: "El eficiente A16 mantiene ágiles las apps, los juegos, la multitarea y las herramientas creativas.",
@@ -149,10 +149,10 @@ const ipadProductCopy: Record<ContentLanguage, Record<IpadModel, ProductCopy>> =
   },
   zh: {
     "ipad-pro-m5": {
-      name: "iPad Pro", eyebrow: "PRO 级实力，随身而行。", intro: "M5 芯片、超视网膜 XDR 显示屏与超薄铝金属设计，为专业创作提供强大性能。", display: "11″ / 13″ XDR", camera: "1200 万像素广角", battery: "10 小时", designTitle: "Pro 级能力，薄得惊人。", designBody: "13 英寸机型仅薄 5.1 毫米，轻巧的再生铝金属机身让完整工作室随你出发。", cameraTitle: "拍摄、扫描、创作。", cameraBody: "1200 万像素广角相机可录制 4K ProRes，横向 Center Stage 相机让视频通话始终居中。", performanceTitle: "M5，AI 能力大步跃升。", performanceBody: "新一代 CPU、GPU 神经网络加速器与媒体引擎，加速图形、AI 和专业视频工作流。",
+      name: "iPad Pro 13″", eyebrow: "PRO 级实力，随身而行。", intro: "M5 芯片、13 英寸超视网膜 XDR 显示屏与超薄铝金属设计，为专业创作提供强大性能。", display: "13″ Ultra Retina XDR", camera: "1200 万像素广角", battery: "10 小时", designTitle: "Pro 级能力，薄得惊人。", designBody: "机身仅薄 5.1 毫米，Wi‑Fi 机型重 579 克，轻巧的再生铝金属机身让完整工作室随你出发。", cameraTitle: "拍摄、扫描、创作。", cameraBody: "1200 万像素广角相机可录制 4K ProRes，横向 Center Stage 相机让视频通话始终居中。", performanceTitle: "M5，AI 能力大步跃升。", performanceBody: "新一代 CPU、GPU 神经网络加速器与媒体引擎，加速图形、AI 和专业视频工作流。",
     },
     "ipad-air-m4": {
-      name: "iPad Air", eyebrow: "轻盈，更强大。", intro: "M4 芯片、两种尺寸、Apple 智能与 Apple Pencil Pro 支持，融入轻薄多彩设计。", display: "11″ / 13″ Retina", camera: "1200 万像素广角", battery: "10 小时", designTitle: "两种尺寸，四款配色。", designBody: "可选便携的 11 英寸或宽阔的 13 英寸显示屏，两者都采用轻巧铝金属机身。", cameraTitle: "始终保持居中。", cameraBody: "横向 Center Stage 相机自动跟随交流，后置 1200 万像素相机拍摄细腻照片与 4K 视频。", performanceTitle: "M4，推动一切向前。", performanceBody: "高速 CPU、硬件加速光线追踪与 16 核神经网络引擎带来流畅创作和设备端 AI。",
+      name: "iPad Air 13″", eyebrow: "轻盈，更强大。", intro: "13 英寸 Liquid 视网膜显示屏、M4 芯片、Apple 智能与 Apple Pencil Pro 支持，融入轻薄多彩设计。", display: "13″ Liquid Retina", camera: "1200 万像素广角", battery: "10 小时", designTitle: "画布更大，四款配色。", designBody: "13 英寸显示屏置于 6.1 毫米铝金属机身中，Wi‑Fi 机型重 616 克，宽阔视野与便携兼得。", cameraTitle: "始终保持居中。", cameraBody: "横向 Center Stage 相机自动跟随交流，后置 1200 万像素相机拍摄细腻照片与 4K 视频。", performanceTitle: "M4，推动一切向前。", performanceBody: "高速 CPU、硬件加速光线追踪与 16 核神经网络引擎带来流畅创作和设备端 AI。",
     },
     "ipad-a16": {
       name: "iPad", eyebrow: "多彩、多能、妙趣横生。", intro: "11 英寸 Liquid 视网膜显示屏、A16 芯片和全面屏设计，工作娱乐创作都得心应手。", display: "11″ Retina", camera: "1200 万像素广角", battery: "10 小时", designTitle: "全面屏，满目多彩。", designBody: "纤薄铝金属机身提供四款配色，并集成 Touch ID 与 USB-C。", cameraTitle: "清晰出镜，始终居中。", cameraBody: "1200 万像素广角相机录制 4K 视频，横向 Center Stage 相机令通话更自然。", performanceTitle: "A16，乐趣再加码。", performanceBody: "高效 A16 让应用、游戏、多任务和创作工具全天保持灵敏响应。",
@@ -163,10 +163,10 @@ const ipadProductCopy: Record<ContentLanguage, Record<IpadModel, ProductCopy>> =
   },
   ja: {
     "ipad-pro-m5": {
-      name: "iPad Pro", eyebrow: "PROのパワーを、どこへでも。", intro: "M5の性能、Ultra Retina XDRディスプレイ、驚くほど薄いアルミニウムボディで高度な制作を支えます。", display: "11″ / 13″ XDR", camera: "12MP広角", battery: "10時間", designTitle: "Proの能力。信じられない薄さ。", designBody: "13インチモデルはわずか5.1mm。軽量な再生アルミニウムのボディでスタジオを持ち運べます。", cameraTitle: "撮影、スキャン、制作。", cameraBody: "12MP広角カメラは4K ProResに対応し、横向きのセンターフレームカメラが通話を自然に保ちます。", performanceTitle: "M5。AIの大きな飛躍。", performanceBody: "次世代CPU、GPUのNeural Accelerator、高速Media Engineがグラフィックス、AI、映像制作を加速します。",
+      name: "iPad Pro 13″", eyebrow: "PROのパワーを、どこへでも。", intro: "M5の性能、13インチUltra Retina XDR、驚くほど薄いアルミニウムボディで高度な制作を支えます。", display: "13″ Ultra Retina XDR", camera: "12MP広角", battery: "10時間", designTitle: "Proの能力。信じられない薄さ。", designBody: "厚さはわずか5.1mm、Wi‑Fiモデルは579g。軽量な再生アルミニウムボディでスタジオを持ち運べます。", cameraTitle: "撮影、スキャン、制作。", cameraBody: "12MP広角カメラは4K ProResに対応し、横向きのセンターフレームカメラが通話を自然に保ちます。", performanceTitle: "M5。AIの大きな飛躍。", performanceBody: "次世代CPU、GPUのNeural Accelerator、高速Media Engineがグラフィックス、AI、映像制作を加速します。",
     },
     "ipad-air-m4": {
-      name: "iPad Air", eyebrow: "軽やかに、パワフルに。", intro: "M4、2つのサイズ、Apple Intelligence、Apple Pencil Proへの対応を薄くカラフルなデザインに。", display: "11″ / 13″ Retina", camera: "12MP広角", battery: "10時間", designTitle: "2つのサイズ。4つのカラー。", designBody: "携帯性に優れた11インチと広々した13インチ。どちらも軽いアルミニウムボディです。", cameraTitle: "いつでも画面の中心に。", cameraBody: "横向きセンターフレームが会話を追い、背面12MPカメラが精細な写真と4Kビデオを撮影します。", performanceTitle: "M4で、すべてを前へ。", performanceBody: "高速CPU、レイトレーシング、16コアNeural Engineが制作とデバイス上のAIを滑らかにします。",
+      name: "iPad Air 13″", eyebrow: "軽やかに、パワフルに。", intro: "13インチLiquid Retina、M4、Apple Intelligence、Apple Pencil Proへの対応を薄くカラフルなデザインに。", display: "13″ Liquid Retina", camera: "12MP広角", battery: "10時間", designTitle: "大きなキャンバス。4つのカラー。", designBody: "13インチディスプレイを厚さ6.1mmのアルミニウムボディに搭載。Wi‑Fiモデルは616gで、広さと携帯性を両立します。", cameraTitle: "いつでも画面の中心に。", cameraBody: "横向きセンターフレームが会話を追い、背面12MPカメラが精細な写真と4Kビデオを撮影します。", performanceTitle: "M4で、すべてを前へ。", performanceBody: "高速CPU、レイトレーシング、16コアNeural Engineが制作とデバイス上のAIを滑らかにします。",
     },
     "ipad-a16": {
       name: "iPad", eyebrow: "カラフル。万能。楽しい。", intro: "11インチLiquid Retinaディスプレイ、A16、オールスクリーンデザインで仕事も遊びも創作も。", display: "11″ Retina", camera: "12MP広角", battery: "10時間", designTitle: "画面いっぱい。カラーいっぱい。", designBody: "薄いアルミニウムボディに4つのカラー、Touch ID、USB-Cを備えています。", cameraTitle: "鮮明に、いつも中心に。", cameraBody: "12MP広角カメラで4Kビデオを撮影し、横向きセンターフレームが通話を自然にします。", performanceTitle: "A16。楽しさをさらに。", performanceBody: "効率的なA16がアプリ、ゲーム、マルチタスク、制作ツールを一日中軽快に動かします。",

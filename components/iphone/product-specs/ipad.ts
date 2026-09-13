@@ -8,8 +8,8 @@ export const ipadTechnicalSpecs = {
     fields: {
       finishes: fact("Silver or Space Black; recycled aluminum enclosure", "Bạc hoặc Space Black; vỏ nhôm tái chế"),
       capacity: "256GB / 512GB / 1TB / 2TB",
-      dimensions: fact("11-inch: 249.7 × 177.5 × 5.3 mm, 444 g; 13-inch: 281.6 × 215.5 × 5.1 mm, 579 g (Wi‑Fi)", "11 inch: 249,7 × 177,5 × 5,3 mm, 444 g; 13 inch: 281,6 × 215,5 × 5,1 mm, 579 g (Wi‑Fi)"),
-      display: fact("11- or 13-inch Ultra Retina XDR Tandem OLED; ProMotion 10–120Hz; 1000 nits full-screen, 1600 nits peak HDR; nano-texture option on 1TB/2TB", "Ultra Retina XDR Tandem OLED 11 hoặc 13 inch; ProMotion 10–120Hz; 1.000 nit toàn màn hình, 1.600 nit HDR; tùy chọn kính nano-texture trên bản 1TB/2TB"),
+      dimensions: fact("281.6 × 215.5 × 5.1 mm; 579 g Wi‑Fi or 582 g Cellular", "281,6 × 215,5 × 5,1 mm; 579 g bản Wi‑Fi hoặc 582 g bản Cellular"),
+      display: fact("13-inch Ultra Retina XDR Tandem OLED, 2752×2064 at 264 ppi; ProMotion 10–120Hz; 1000 nits full-screen, 1600 nits peak HDR; nano-texture option on 1TB/2TB", "Ultra Retina XDR Tandem OLED 13 inch, 2752×2064 ở 264 ppi; ProMotion 10–120Hz; 1.000 nit toàn màn hình, 1.600 nit HDR; tùy chọn kính nano-texture trên bản 1TB/2TB"),
       chip: fact("M5: 9- or 10-core CPU, 10-core GPU with Neural Accelerators, 16-core Neural Engine", "M5: CPU 9 hoặc 10 lõi, GPU 10 lõi có Neural Accelerator, Neural Engine 16 lõi"),
       memory: fact("12GB unified memory on 256/512GB; 16GB on 1/2TB", "Bộ nhớ thống nhất 12GB trên bản 256/512GB; 16GB trên bản 1/2TB"),
       camera: "12MP Wide, LiDAR, Adaptive True Tone flash; 4K and ProRes video",
@@ -29,8 +29,8 @@ export const ipadTechnicalSpecs = {
     fields: {
       finishes: fact("Blue, Purple, Starlight, Space Gray; aluminum", "Xanh Dương, Tím, Ánh Sao, Xám Không Gian; nhôm"),
       capacity: "128GB / 256GB / 512GB / 1TB",
-      dimensions: fact("11-inch: 247.6 × 178.5 × 6.1 mm, 464 g; 13-inch: 280.6 × 214.9 × 6.1 mm, 616 g (Wi‑Fi)", "11 inch: 247,6 × 178,5 × 6,1 mm, 464 g; 13 inch: 280,6 × 214,9 × 6,1 mm, 616 g (Wi‑Fi)"),
-      display: fact("11-inch 2360×1640 at 500 nits or 13-inch 2732×2048 at 600 nits; laminated P3 Liquid Retina", "Liquid Retina P3 ép lớp: 11 inch 2360×1640, 500 nit hoặc 13 inch 2732×2048, 600 nit"),
+      dimensions: fact("280.6 × 214.9 × 6.1 mm; 616 g Wi‑Fi or 617 g Cellular", "280,6 × 214,9 × 6,1 mm; 616 g bản Wi‑Fi hoặc 617 g bản Cellular"),
+      display: fact("13-inch Liquid Retina, 2732×2048 at 264 ppi; laminated P3 display, True Tone, 600 nits", "Liquid Retina 13 inch, 2732×2048 ở 264 ppi; màn hình P3 ép lớp, True Tone, 600 nit"),
       chip: fact("M4: 8-core CPU, 9-core GPU, 16-core Neural Engine, 120GB/s memory bandwidth", "M4: CPU 8 lõi, GPU 9 lõi, Neural Engine 16 lõi, băng thông bộ nhớ 120GB/s"),
       memory: "12GB unified memory",
       camera: "12MP Wide; 4K video up to 60 fps",

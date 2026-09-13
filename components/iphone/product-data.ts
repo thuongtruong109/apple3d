@@ -36,6 +36,7 @@ export type AirPodsModel =
   | "airpods-max-2";
 export type MacModel =
   | "macbook-air-m5"
+  | "macbook-air-15-m5"
   | "macbook-pro-m5"
   | "imac-m4"
   | "mac-mini-m6"
@@ -242,8 +243,8 @@ export const productCatalog: Record<Model, ProductDefinition> = {
     sceneOrientation: "native",
   },
   "ipad-pro-m5": {
-    label: "iPad Pro (M5)",
-    shortLabel: "Pro M5",
+    label: "iPad Pro 13″ (M5)",
+    shortLabel: "Pro 13″",
     defaultFinish: "space-black",
     isFoldable: false,
     sceneHeight: 7.2,
@@ -251,8 +252,8 @@ export const productCatalog: Record<Model, ProductDefinition> = {
     sceneRotationZ: Math.PI,
   },
   "ipad-air-m4": {
-    label: "iPad Air (M4)",
-    shortLabel: "Air M4",
+    label: "iPad Air 13″ (M4)",
+    shortLabel: "Air 13″",
     defaultFinish: "blue",
     isFoldable: false,
     sceneHeight: 7.1,
@@ -326,16 +327,24 @@ export const productCatalog: Record<Model, ProductDefinition> = {
     sceneRotationY: 0.18,
   },
   "macbook-air-m5": {
-    label: "MacBook Air (M5)",
-    shortLabel: "Air M5",
+    label: "MacBook Air 13″ (M5)",
+    shortLabel: "Air 13″",
+    defaultFinish: "sky-blue",
+    isFoldable: false,
+    sceneHeight: 7.3,
+    sceneOrientation: "native",
+  },
+  "macbook-air-15-m5": {
+    label: "MacBook Air 15″ (M5)",
+    shortLabel: "Air 15″",
     defaultFinish: "sky-blue",
     isFoldable: false,
     sceneHeight: 7.3,
     sceneOrientation: "native",
   },
   "macbook-pro-m5": {
-    label: "MacBook Pro (M5)",
-    shortLabel: "Pro M5",
+    label: "MacBook Pro 14″ (M5)",
+    shortLabel: "Pro 14″",
     defaultFinish: "space-black",
     isFoldable: false,
     sceneHeight: 7.3,
@@ -519,7 +528,7 @@ export const seriesCatalog: Record<Series, SeriesDefinition> = {
     label: "MacBook Air",
     shortLabel: "Air",
     defaultModel: "macbook-air-m5",
-    models: ["macbook-air-m5"],
+    models: ["macbook-air-m5", "macbook-air-15-m5"],
   },
   "macbook-pro": {
     label: "MacBook Pro",
@@ -619,6 +628,7 @@ export const modelFinishes: Record<Model, ReadonlyArray<Finish>> = {
   "airpods-pro-3": ["white"],
   "airpods-max-2": ["midnight"],
   "macbook-air-m5": ["sky-blue"],
+  "macbook-air-15-m5": ["sky-blue"],
   "macbook-pro-m5": ["space-black"],
   "imac-m4": ["blue"],
   "mac-mini-m6": ["silver"],
@@ -683,6 +693,7 @@ export function isAirPodsModel(model: Model): model is AirPodsModel {
 
 export function isMacModel(model: Model): model is MacModel {
   return model === "macbook-air-m5"
+    || model === "macbook-air-15-m5"
     || model === "macbook-pro-m5"
     || model === "imac-m4"
     || model === "mac-mini-m6"

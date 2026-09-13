@@ -13,8 +13,8 @@
 - `iphone-15.usdz` / `iphone-15-plus.usdz` — separate Apple AR assets for the base sizes in Pink.
 - `iphone-14-pro.usdz` / `iphone-14-pro-max.usdz` — separate Apple AR assets for the Pro sizes in Deep Purple.
 - `iphone-14.usdz` / `iphone-14-plus.usdz` — separate Apple AR assets for the base sizes in Blue.
-- `ipad-pro-m5.usdz` — Apple AR asset for iPad Pro in Space Black.
-- `ipad-air-m4.usdz` — Apple AR asset for iPad Air in Blue with its published accessories.
+- `ipad-pro-m5.usdz` — Apple AR asset for the 13-inch iPad Pro in Space Black; its geometry was checked against Apple's published 13-inch dimensions.
+- `ipad-air-m4.usdz` — Apple AR asset for the 13-inch iPad Air in Blue with its published accessories; its geometry was checked against Apple's published 13-inch dimensions.
 - `ipad-a16.usdz` — Apple AR asset for iPad in Pink.
 - `ipad-mini-a17-pro.usdz` — Apple AR asset for iPad mini in Purple.
 - `apple-watch-series-11.usdz` — Apple AR asset for Apple Watch Series 11 in Rose Gold with a Light Blush Sport Band.
@@ -24,6 +24,7 @@
 - `airpods-pro-3.usdz` — Apple AR asset for AirPods Pro 3 in White.
 - `airpods-max-2.usdz` — Apple AR asset for AirPods Max 2 with Apple's Midnight color variant selected for the browser export.
 - `macbook-air-m5.usdz` — Apple AR asset for the 13-inch MacBook Air with M5 in Sky Blue.
+- `macbook-air-15-m5.usdz` — Apple AR asset for the 15-inch MacBook Air with M5 in Sky Blue.
 - `macbook-pro-m5.usdz` — Apple AR asset for the 14-inch MacBook Pro M5 family in Space Black.
 - `imac-m4.usdz` — Apple AR asset for the blue iMac M4 with color-matched accessories.
 - `mac-mini-m6.usdz` — Apple AR asset for the silver Mac mini M6 / M5 Pro enclosure.
@@ -37,10 +38,10 @@
 - `iphone-16-pro*.glb`, `iphone-16*.glb`, and `iphone-16e.glb` — browser-ready exports of all five iPhone 16 series devices.
 - `iphone-15-pro*.glb` and `iphone-15*.glb` — browser-ready exports of all four iPhone 15 series devices.
 - `iphone-14-pro*.glb` and `iphone-14*.glb` — browser-ready exports of all four iPhone 14 series devices.
-- `ipad-pro-m5.glb`, `ipad-air-m4.glb`, `ipad-a16.glb`, and `ipad-mini-a17-pro.glb` — browser-ready exports of the current iPad families.
+- `ipad-pro-m5.glb`, `ipad-air-m4.glb`, `ipad-a16.glb`, and `ipad-mini-a17-pro.glb` — browser-ready exports of the exact iPad sizes identified above.
 - `apple-watch-series-11.glb`, `apple-watch-ultra-3.glb`, and `apple-watch-se-3.glb` — browser-ready exports of the latest complete Apple Watch lineup for which Apple published public AR assets.
 - `airpods-5.glb`, `airpods-pro-3.glb`, and `airpods-max-2.glb` — indexed browser-ready exports of Apple's current AirPods, AirPods Pro, and AirPods Max AR scenes.
-- `macbook-air-m5.glb`, `macbook-pro-m5.glb`, `imac-m4.glb`, `mac-mini-m6.glb`, `mac-studio-m5.glb`, and `mac-pro-m2-ultra.glb` — browser-ready exports for all six requested Mac branches.
+- `macbook-air-m5.glb`, `macbook-air-15-m5.glb`, `macbook-pro-m5.glb`, `imac-m4.glb`, `mac-mini-m6.glb`, `mac-studio-m5.glb`, and `mac-pro-m2-ultra.glb` — browser-ready exports for the supported Mac branches and exact notebook sizes.
 - `apple-vision-pro-m5.glb` — browser-ready export of the current Apple Vision Pro AR scene.
 
 The Three.js experience loads the GLB exports. They retain the source meshes, per-vertex normals,
@@ -78,6 +79,7 @@ Original public AR URLs:
 - https://www.apple.com/105/media/us/airpods-pro/2025/7acffb13-4adb-40b1-9393-8f1c99bc6c90/ar/airpods-pro.usdz
 - https://www.apple.com/105/media/us/airpods-max/2024/e8f376d6-82b2-40ca-8a22-5f87de755d6b/ar/airpods-max-midnight-variant.usdz
 - https://www.apple.com/105/media/us/macbook-air/2026/ff11cb38-708e-4c28-9653-1b01a2f8fd2b/ar/macbook-air-13in-sky-blue.usdz
+- https://www.apple.com/105/media/us/macbook-air/2026/ff11cb38-708e-4c28-9653-1b01a2f8fd2b/ar/macbook-air-15in-sky-blue.usdz
 - https://www.apple.com/105/media/us/macbook-pro/2025/785e1bc4-d1bd-4cf4-b1b3-94b9411c9e74/ar/macbook-pro-14-in-space-black-variant.usdz
 - https://www.apple.com/105/media/us/imac/2024/e1d50c6b-bc34-47bd-850d-379149b71fb8/ar/imac-with-accessories-blue.usdz
 - https://www.apple.com/105/media/us/mac-mini/2026/2140fd43-1461-420d-942c-6f254535a9a4/ar/mac-mini-silver.usdz

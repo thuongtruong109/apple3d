@@ -96,6 +96,9 @@ const OFFICIAL_MODEL_URLS: Record<Exclude<Model, "duo">, Partial<Record<Finish, 
   "macbook-air-m5": {
     "sky-blue": "/models/macbook-air-m5.glb",
   },
+  "macbook-air-15-m5": {
+    "sky-blue": "/models/macbook-air-15-m5.glb",
+  },
   "macbook-pro-m5": {
     "space-black": "/models/macbook-pro-m5.glb",
   },
