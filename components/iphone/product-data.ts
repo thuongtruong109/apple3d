@@ -16,6 +16,11 @@ export type Iphone15Model =
   | "15-pro-max"
   | "15"
   | "15-plus";
+export type Iphone14Model =
+  | "14-pro"
+  | "14-pro-max"
+  | "14"
+  | "14-plus";
 export type IpadModel =
   | "ipad-pro-m5"
   | "ipad-air-m4"
@@ -41,13 +46,14 @@ export type NewModel =
   | Iphone17Model
   | Iphone16Model
   | Iphone15Model
+  | Iphone14Model
   | IpadModel
   | AppleWatchModel
   | AirPodsModel
   | MacModel
   | AppleVisionModel;
 export type Model = LegacyModel | NewModel;
-export type IphoneSeries = "18" | "17" | "16" | "15";
+export type IphoneSeries = "18" | "17" | "16" | "15" | "14";
 export type IpadSeries = "ipad-pro" | "ipad-air" | "ipad" | "ipad-mini";
 export type AppleWatchSeries = "apple-watch-series" | "apple-watch-ultra" | "apple-watch-se";
 export type AirPodsSeries = "airpods" | "airpods-pro" | "airpods-max";
@@ -69,6 +75,7 @@ export type Finish =
   | "desert-titanium"
   | "natural-titanium"
   | "space-black"
+  | "deep-purple"
   | "rose-gold"
   | "midnight"
   | "ultramarine"
@@ -201,6 +208,38 @@ export const productCatalog: Record<Model, ProductDefinition> = {
     defaultFinish: "pink",
     isFoldable: false,
     sceneHeight: 6.33,
+  },
+  "14-pro": {
+    label: "iPhone 14 Pro",
+    shortLabel: "14 Pro",
+    defaultFinish: "deep-purple",
+    isFoldable: false,
+    sceneHeight: 5.81,
+    sceneOrientation: "native",
+  },
+  "14-pro-max": {
+    label: "iPhone 14 Pro Max",
+    shortLabel: "14 Pro Max",
+    defaultFinish: "deep-purple",
+    isFoldable: false,
+    sceneHeight: 6.33,
+    sceneOrientation: "native",
+  },
+  "14": {
+    label: "iPhone 14",
+    shortLabel: "14",
+    defaultFinish: "blue",
+    isFoldable: false,
+    sceneHeight: 5.78,
+    sceneOrientation: "native",
+  },
+  "14-plus": {
+    label: "iPhone 14 Plus",
+    shortLabel: "14 Plus",
+    defaultFinish: "blue",
+    isFoldable: false,
+    sceneHeight: 6.33,
+    sceneOrientation: "native",
   },
   "ipad-pro-m5": {
     label: "iPad Pro (M5)",
@@ -353,7 +392,7 @@ type SeriesDefinition = {
   models: ReadonlyArray<Model>;
 };
 
-export const iphoneSeriesIds = ["18", "17", "16", "15"] as const satisfies ReadonlyArray<IphoneSeries>;
+export const iphoneSeriesIds = ["18", "17", "16", "15", "14"] as const satisfies ReadonlyArray<IphoneSeries>;
 export const ipadSeriesIds = ["ipad-pro", "ipad-air", "ipad", "ipad-mini"] as const satisfies ReadonlyArray<IpadSeries>;
 export const appleWatchSeriesIds = [
   "apple-watch-series",
@@ -409,6 +448,12 @@ export const seriesCatalog: Record<Series, SeriesDefinition> = {
     shortLabel: "15",
     defaultModel: "15-pro",
     models: ["15-pro", "15-pro-max", "15", "15-plus"],
+  },
+  "14": {
+    label: "iPhone 14",
+    shortLabel: "14",
+    defaultModel: "14-pro",
+    models: ["14-pro", "14-pro-max", "14", "14-plus"],
   },
   "ipad-pro": {
     label: "iPad Pro",
@@ -532,6 +577,7 @@ export const finishes: Record<Finish, { name: string; color: string; accent: str
   "desert-titanium": { name: "Desert Titanium", color: "#b9a08e", accent: "#ead3c1" },
   "natural-titanium": { name: "Natural Titanium", color: "#8f897f", accent: "#d5cec2" },
   "space-black": { name: "Space Black", color: "#3a3a3c", accent: "#a5a5aa" },
+  "deep-purple": { name: "Deep Purple", color: "#514f59", accent: "#aaa5b3" },
   "rose-gold": { name: "Rose Gold", color: "#c98978", accent: "#f2c4b7" },
   midnight: { name: "Midnight", color: "#20252d", accent: "#858f9f" },
   ultramarine: { name: "Ultramarine", color: "#5463c6", accent: "#a8b0ff" },
@@ -558,6 +604,10 @@ export const modelFinishes: Record<Model, ReadonlyArray<Finish>> = {
   "15-pro-max": ["natural-titanium"],
   "15": ["pink"],
   "15-plus": ["pink"],
+  "14-pro": ["deep-purple"],
+  "14-pro-max": ["deep-purple"],
+  "14": ["blue"],
+  "14-plus": ["blue"],
   "ipad-pro-m5": ["space-black"],
   "ipad-air-m4": ["blue"],
   "ipad-a16": ["pink"],
@@ -603,6 +653,13 @@ export function isIphone15Model(model: Model): model is Iphone15Model {
     || model === "15-pro-max"
     || model === "15"
     || model === "15-plus";
+}
+
+export function isIphone14Model(model: Model): model is Iphone14Model {
+  return model === "14-pro"
+    || model === "14-pro-max"
+    || model === "14"
+    || model === "14-plus";
 }
 
 export function isIpadModel(model: Model): model is IpadModel {

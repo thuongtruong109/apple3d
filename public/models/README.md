@@ -11,6 +11,8 @@
 - `iphone-16e.usdz` — Apple AR asset for iPhone 16e in White.
 - `iphone-15-pro.usdz` / `iphone-15-pro-max.usdz` — separate Apple AR assets for the Pro sizes in Natural Titanium.
 - `iphone-15.usdz` / `iphone-15-plus.usdz` — separate Apple AR assets for the base sizes in Pink.
+- `iphone-14-pro.usdz` / `iphone-14-pro-max.usdz` — separate Apple AR assets for the Pro sizes in Deep Purple.
+- `iphone-14.usdz` / `iphone-14-plus.usdz` — separate Apple AR assets for the base sizes in Blue.
 - `ipad-pro-m5.usdz` — Apple AR asset for iPad Pro in Space Black.
 - `ipad-air-m4.usdz` — Apple AR asset for iPad Air in Blue with its published accessories.
 - `ipad-a16.usdz` — Apple AR asset for iPad in Pink.
@@ -34,6 +36,7 @@
 - `iphone-air.glb`, `iphone-17.glb`, and `iphone-17e.glb` — browser-ready exports of the representative AR finish published on each Apple product page.
 - `iphone-16-pro*.glb`, `iphone-16*.glb`, and `iphone-16e.glb` — browser-ready exports of all five iPhone 16 series devices.
 - `iphone-15-pro*.glb` and `iphone-15*.glb` — browser-ready exports of all four iPhone 15 series devices.
+- `iphone-14-pro*.glb` and `iphone-14*.glb` — browser-ready exports of all four iPhone 14 series devices.
 - `ipad-pro-m5.glb`, `ipad-air-m4.glb`, `ipad-a16.glb`, and `ipad-mini-a17-pro.glb` — browser-ready exports of the current iPad families.
 - `apple-watch-series-11.glb`, `apple-watch-ultra-3.glb`, and `apple-watch-se-3.glb` — browser-ready exports of the latest complete Apple Watch lineup for which Apple published public AR assets.
 - `airpods-5.glb`, `airpods-pro-3.glb`, and `airpods-max-2.glb` — indexed browser-ready exports of Apple's current AirPods, AirPods Pro, and AirPods Max AR scenes.
@@ -60,6 +63,10 @@ Original public AR URLs:
 - https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15-pro/iphone_15_pro_max_natural_titanium_5G.usdz
 - https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15/iphone_15_pink_5G.usdz
 - https://www.apple.com/105/media/us/iphone/shared/ar/2023/f6ca1075-bfa5-441b-b6c2-61e5ce4c15b2/iphone-15/iphone_15_plus_pink_5G.usdz
+- https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14-pro/iphone_14_pro_deep_purple_5G.usdz
+- https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14-pro/iphone_14_pro_max_deep_purple_5G.usdz
+- https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14/iphone_14_blue_5G.usdz
+- https://www.apple.com/105/media/us/iphone/shared/ar/2022/95e52aae-96c0-48d6-87f9-77b3fe97bff9/iphone-14/iphone_14_plus_blue_5G.usdz
 - https://www.apple.com/105/media/us/ipad-pro/2025/adee90db-c01e-430d-b726-fe64c0063f08/ar/ipad-pro-space-black.usdz
 - https://www.apple.com/105/media/us/ipad-air/2025/e184d49a-4015-42ae-8a8b-db06bfeabd75/ar/ipad-air-blue-with-accessories.usdz
 - https://www.apple.com/105/media/us/ipad-11/2025/21af9618-666d-4368-9fb9-38822c35dc35/ar/ipad-11-pink.usdz

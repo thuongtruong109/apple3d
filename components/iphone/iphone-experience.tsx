@@ -17,6 +17,7 @@ import { ProductTechnicalSpecs } from "./product-technical-specs";
 import { SegmentedControl } from "./segmented-control";
 import { SeriesSelect } from "./series-select";
 import { getProductCopy } from "./product-copy";
+import { productTechnicalSpecs } from "./product-specs";
 import {
   finishes,
   getSeriesForModel,
@@ -41,6 +42,10 @@ export function AppleProductExperience() {
   const experienceRef = useRef<HTMLElement>(null);
   const { language, setLanguage, content } = useLanguage();
   const active = getProductCopy(content, language, model);
+  const introKicker = content.journey.introKicker.replace(
+    /\d{4}(?:–\d{4})?$/,
+    productTechnicalSpecs[model].introduced,
+  );
   const availableFinishes = modelFinishes[model];
   const series = getSeriesForModel(model);
   const hasCatalog = hasProductModels(category);
@@ -247,7 +252,7 @@ export function AppleProductExperience() {
 
         {hasCatalog && <div className="scroll-narrative">
           <article className="journey-copy journey-copy--one">
-            <p className="journey-kicker">{content.journey.introKicker}</p>
+            <p className="journey-kicker">{introKicker}</p>
             <h1>{active.name}</h1>
             <h2>{active.eyebrow}</h2>
             <p>{active.intro}</p>

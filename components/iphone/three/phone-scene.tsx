@@ -35,6 +35,7 @@ const finishColors: Record<Finish, string> = {
   "desert-titanium": "#b9a08e",
   "natural-titanium": "#8f897f",
   "space-black": "#3a3a3c",
+  "deep-purple": "#514f59",
   "rose-gold": "#c98978",
   midnight: "#20252d",
   ultramarine: "#5463c6",

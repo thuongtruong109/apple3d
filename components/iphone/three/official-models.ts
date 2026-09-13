@@ -51,6 +51,18 @@ const OFFICIAL_MODEL_URLS: Record<Exclude<Model, "duo">, Partial<Record<Finish, 
   "15-plus": {
     pink: "/models/iphone-15-plus.glb",
   },
+  "14-pro": {
+    "deep-purple": "/models/iphone-14-pro.glb",
+  },
+  "14-pro-max": {
+    "deep-purple": "/models/iphone-14-pro-max.glb",
+  },
+  "14": {
+    blue: "/models/iphone-14.glb",
+  },
+  "14-plus": {
+    blue: "/models/iphone-14-plus.glb",
+  },
   "ipad-pro-m5": {
     "space-black": "/models/ipad-pro-m5.glb",
   },

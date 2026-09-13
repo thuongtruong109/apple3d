@@ -1,7 +1,7 @@
-import type { Iphone15Model, Iphone16Model, Iphone17Model, LegacyModel } from "../product-data";
+import type { Iphone14Model, Iphone15Model, Iphone16Model, Iphone17Model, LegacyModel } from "../product-data";
 import { fact, type ProductTechnicalSpecCatalog } from "./types";
 
-type IphoneModel = LegacyModel | Iphone17Model | Iphone16Model | Iphone15Model;
+type IphoneModel = LegacyModel | Iphone17Model | Iphone16Model | Iphone15Model | Iphone14Model;
 
 export const iphoneTechnicalSpecs = {
   pro: {
@@ -308,6 +308,82 @@ export const iphoneTechnicalSpecs = {
       durability: "IP68; Ceramic Shield front",
       connectivity: "5G, Wi‑Fi 6, Bluetooth 5.3, second-generation UWB",
       ports: "USB‑C with USB 2 up to 480Mb/s and DisplayPort",
+      authentication: "Face ID",
+    },
+  },
+  "14-pro": {
+    introduced: "2022",
+    sourceUrl: "https://support.apple.com/en-us/111849",
+    fields: {
+      finishes: fact("Space Black, Silver, Gold, Deep Purple; stainless steel with textured matte glass", "Đen Không Gian, Bạc, Vàng, Tím Đậm; thép không gỉ và kính nhám"),
+      capacity: "128GB / 256GB / 512GB / 1TB",
+      dimensions: fact("147.5 × 71.5 × 7.85 mm; 206 g", "147,5 × 71,5 × 7,85 mm; 206 g"),
+      display: fact("6.1-inch OLED, 2556×1179 at 460 ppi; Dynamic Island, Always-On, ProMotion up to 120Hz; 1000 nits typical, 1600 nits HDR, 2000 nits outdoors", "OLED 6,1 inch, 2556×1179, 460 ppi; Dynamic Island, Luôn Bật, ProMotion đến 120Hz; 1.000 nit tiêu chuẩn, 1.600 nit HDR, 2.000 nit ngoài trời"),
+      chip: fact("A16 Bionic: 6-core CPU, 5-core GPU, 16-core Neural Engine", "A16 Bionic: CPU 6 lõi, GPU 5 lõi, Neural Engine 16 lõi"),
+      camera: fact("48MP Main, 12MP Ultra Wide, 12MP 3x Telephoto; optical-quality 2x; LiDAR; 6x optical zoom range and up to 15x digital zoom", "Chính 48MP, Ultra Wide 12MP, Tele 3x 12MP; 2x chất lượng quang học; LiDAR; dải zoom quang học 6x và zoom số đến 15x"),
+      frontCamera: fact("12MP TrueDepth, ƒ/1.9 with autofocus; 4K Dolby Vision up to 60 fps", "TrueDepth 12MP, ƒ/1.9, lấy nét tự động; 4K Dolby Vision đến 60 fps"),
+      battery: fact("Up to 23 hours video, 20 hours streamed video, or 75 hours audio playback", "Phát video đến 23 giờ, video trực tuyến 20 giờ hoặc âm thanh 75 giờ"),
+      charging: fact("50% in about 30 minutes with a 20W adapter; MagSafe up to 15W and Qi up to 7.5W", "50% trong khoảng 30 phút với bộ tiếp hợp 20W; MagSafe đến 15W và Qi đến 7,5W"),
+      durability: fact("IP68 to 6 m for 30 minutes; Ceramic Shield front", "IP68 ở độ sâu 6 m trong 30 phút; mặt trước Ceramic Shield"),
+      connectivity: "5G, Gigabit LTE, Wi‑Fi 6, Bluetooth 5.3, Ultra Wideband, NFC",
+      ports: fact("Lightning; video output up to 1080p through compatible adapters", "Lightning; xuất hình ảnh đến 1080p qua bộ chuyển đổi tương thích"),
+      authentication: "Face ID",
+    },
+  },
+  "14-pro-max": {
+    introduced: "2022",
+    sourceUrl: "https://support.apple.com/en-us/111846",
+    fields: {
+      finishes: fact("Space Black, Silver, Gold, Deep Purple; stainless steel with textured matte glass", "Đen Không Gian, Bạc, Vàng, Tím Đậm; thép không gỉ và kính nhám"),
+      capacity: "128GB / 256GB / 512GB / 1TB",
+      dimensions: fact("160.7 × 77.6 × 7.85 mm; 240 g", "160,7 × 77,6 × 7,85 mm; 240 g"),
+      display: fact("6.7-inch OLED, 2796×1290 at 460 ppi; Dynamic Island, Always-On, ProMotion up to 120Hz; 1000 nits typical, 1600 nits HDR, 2000 nits outdoors", "OLED 6,7 inch, 2796×1290, 460 ppi; Dynamic Island, Luôn Bật, ProMotion đến 120Hz; 1.000 nit tiêu chuẩn, 1.600 nit HDR, 2.000 nit ngoài trời"),
+      chip: fact("A16 Bionic: 6-core CPU, 5-core GPU, 16-core Neural Engine", "A16 Bionic: CPU 6 lõi, GPU 5 lõi, Neural Engine 16 lõi"),
+      camera: fact("48MP Main, 12MP Ultra Wide, 12MP 3x Telephoto; optical-quality 2x; LiDAR; 6x optical zoom range and up to 15x digital zoom", "Chính 48MP, Ultra Wide 12MP, Tele 3x 12MP; 2x chất lượng quang học; LiDAR; dải zoom quang học 6x và zoom số đến 15x"),
+      frontCamera: fact("12MP TrueDepth, ƒ/1.9 with autofocus; 4K Dolby Vision up to 60 fps", "TrueDepth 12MP, ƒ/1.9, lấy nét tự động; 4K Dolby Vision đến 60 fps"),
+      battery: fact("Up to 29 hours video, 25 hours streamed video, or 95 hours audio playback", "Phát video đến 29 giờ, video trực tuyến 25 giờ hoặc âm thanh 95 giờ"),
+      charging: fact("50% in about 35 minutes with a 20W adapter; MagSafe up to 15W and Qi up to 7.5W", "50% trong khoảng 35 phút với bộ tiếp hợp 20W; MagSafe đến 15W và Qi đến 7,5W"),
+      durability: fact("IP68 to 6 m for 30 minutes; Ceramic Shield front", "IP68 ở độ sâu 6 m trong 30 phút; mặt trước Ceramic Shield"),
+      connectivity: "5G, Gigabit LTE, Wi‑Fi 6, Bluetooth 5.3, Ultra Wideband, NFC",
+      ports: fact("Lightning; video output up to 1080p through compatible adapters", "Lightning; xuất hình ảnh đến 1080p qua bộ chuyển đổi tương thích"),
+      authentication: "Face ID",
+    },
+  },
+  "14": {
+    introduced: "2022",
+    sourceUrl: "https://support.apple.com/en-us/111850",
+    fields: {
+      finishes: fact("Midnight, Purple, Starlight, (PRODUCT)RED, Blue, Yellow; aluminum with glass back", "Màu Đêm, Tím, Ánh Sao, (PRODUCT)RED, Xanh Dương, Vàng; nhôm và mặt lưng kính"),
+      capacity: "128GB / 256GB / 512GB",
+      dimensions: fact("146.7 × 71.5 × 7.80 mm; 172 g", "146,7 × 71,5 × 7,80 mm; 172 g"),
+      display: fact("6.1-inch OLED, 2532×1170 at 460 ppi; 800 nits typical and 1200 nits HDR", "OLED 6,1 inch, 2532×1170, 460 ppi; 800 nit tiêu chuẩn và 1.200 nit HDR"),
+      chip: fact("A15 Bionic: 6-core CPU, 5-core GPU, 16-core Neural Engine", "A15 Bionic: CPU 6 lõi, GPU 5 lõi, Neural Engine 16 lõi"),
+      camera: fact("Dual 12MP system: Main ƒ/1.5 with sensor-shift OIS and 12MP Ultra Wide; 2x optical zoom out and up to 5x digital zoom", "Hệ thống kép 12MP: camera Chính ƒ/1.5 với OIS dịch chuyển cảm biến và Ultra Wide 12MP; zoom quang học thu nhỏ 2x và zoom số đến 5x"),
+      frontCamera: fact("12MP TrueDepth, ƒ/1.9 with autofocus; 4K Dolby Vision up to 60 fps", "TrueDepth 12MP, ƒ/1.9, lấy nét tự động; 4K Dolby Vision đến 60 fps"),
+      battery: fact("Up to 20 hours video, 16 hours streamed video, or 80 hours audio playback", "Phát video đến 20 giờ, video trực tuyến 16 giờ hoặc âm thanh 80 giờ"),
+      charging: fact("50% in about 30 minutes with a 20W adapter; MagSafe up to 15W and Qi up to 7.5W", "50% trong khoảng 30 phút với bộ tiếp hợp 20W; MagSafe đến 15W và Qi đến 7,5W"),
+      durability: fact("IP68 to 6 m for 30 minutes; Ceramic Shield front", "IP68 ở độ sâu 6 m trong 30 phút; mặt trước Ceramic Shield"),
+      connectivity: "5G, Gigabit LTE, Wi‑Fi 6, Bluetooth 5.3, Ultra Wideband, NFC",
+      ports: fact("Lightning; video output up to 1080p through compatible adapters", "Lightning; xuất hình ảnh đến 1080p qua bộ chuyển đổi tương thích"),
+      authentication: "Face ID",
+    },
+  },
+  "14-plus": {
+    introduced: "2022",
+    sourceUrl: "https://support.apple.com/en-us/111854",
+    fields: {
+      finishes: fact("Midnight, Purple, Starlight, (PRODUCT)RED, Blue, Yellow; aluminum with glass back", "Màu Đêm, Tím, Ánh Sao, (PRODUCT)RED, Xanh Dương, Vàng; nhôm và mặt lưng kính"),
+      capacity: "128GB / 256GB / 512GB",
+      dimensions: fact("160.8 × 78.1 × 7.80 mm; 203 g", "160,8 × 78,1 × 7,80 mm; 203 g"),
+      display: fact("6.7-inch OLED, 2778×1284 at 458 ppi; 800 nits typical and 1200 nits HDR", "OLED 6,7 inch, 2778×1284, 458 ppi; 800 nit tiêu chuẩn và 1.200 nit HDR"),
+      chip: fact("A15 Bionic: 6-core CPU, 5-core GPU, 16-core Neural Engine", "A15 Bionic: CPU 6 lõi, GPU 5 lõi, Neural Engine 16 lõi"),
+      camera: fact("Dual 12MP system: Main ƒ/1.5 with sensor-shift OIS and 12MP Ultra Wide; 2x optical zoom out and up to 5x digital zoom", "Hệ thống kép 12MP: camera Chính ƒ/1.5 với OIS dịch chuyển cảm biến và Ultra Wide 12MP; zoom quang học thu nhỏ 2x và zoom số đến 5x"),
+      frontCamera: fact("12MP TrueDepth, ƒ/1.9 with autofocus; 4K Dolby Vision up to 60 fps", "TrueDepth 12MP, ƒ/1.9, lấy nét tự động; 4K Dolby Vision đến 60 fps"),
+      battery: fact("Up to 26 hours video, 20 hours streamed video, or 100 hours audio playback", "Phát video đến 26 giờ, video trực tuyến 20 giờ hoặc âm thanh 100 giờ"),
+      charging: fact("50% in about 30 minutes with a 20W adapter; MagSafe up to 15W and Qi up to 7.5W", "50% trong khoảng 30 phút với bộ tiếp hợp 20W; MagSafe đến 15W và Qi đến 7,5W"),
+      durability: fact("IP68 to 6 m for 30 minutes; Ceramic Shield front", "IP68 ở độ sâu 6 m trong 30 phút; mặt trước Ceramic Shield"),
+      connectivity: "5G, Gigabit LTE, Wi‑Fi 6, Bluetooth 5.3, Ultra Wideband, NFC",
+      ports: fact("Lightning; video output up to 1080p through compatible adapters", "Lightning; xuất hình ảnh đến 1080p qua bộ chuyển đổi tương thích"),
       authentication: "Face ID",
     },
   },

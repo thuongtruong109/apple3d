@@ -5,7 +5,7 @@ Cloudflare runtime. The product selector separates iPhone, iPad, Apple Watch,
 Mac, AirPods, and Apple Vision into independent catalog boundaries.
 
 The iPhone catalog includes iPhone 18 Pro, iPhone Duo, and the complete iPhone
-17, iPhone 16, and iPhone 15 families. The iPad catalog includes iPad Pro M5,
+17, iPhone 16, iPhone 15, and iPhone 14 families. The iPad catalog includes iPad Pro M5,
 iPad Air M4, iPad A16, and iPad mini A17 Pro. The Apple Watch catalog includes
 Apple Watch Series 11, Apple Watch Ultra 3, and Apple Watch SE 3. The AirPods
 catalog includes AirPods 5, AirPods Pro 3, and AirPods Max 2. Their browser-ready
