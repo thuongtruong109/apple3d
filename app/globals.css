@@ -143,6 +143,74 @@ a {
 .three-canvas:focus-visible {
   box-shadow: inset 0 0 0 2px #d58a9a;
 }
+.model-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #17141af2 0,
+    #09090bee 34%,
+    #050506c7 68%,
+    #05050699 100%
+  );
+  pointer-events: none;
+}
+.model-loading__rings {
+  position: relative;
+  width: 5.75rem;
+  aspect-ratio: 1;
+}
+.model-loading__rings::before {
+  position: absolute;
+  inset: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: #f1a1b2;
+  box-shadow: 0 0 1.5rem #ff476dcc;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+.model-loading__rings i {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #d58a9a70;
+  border-radius: 50%;
+  animation: model-loading-pulse 1.8s ease-out infinite;
+}
+.model-loading__rings i:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.model-loading__rings i:nth-child(3) {
+  animation-delay: 1.2s;
+}
+@keyframes model-loading-pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.28);
+  }
+  24% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .model-loading__rings i {
+    animation: none;
+  }
+  .model-loading__rings i:nth-child(2) {
+    inset: 18%;
+  }
+  .model-loading__rings i:nth-child(3) {
+    inset: 36%;
+  }
+}
 .webgl-fallback {
   position: absolute;
   inset: 0;

@@ -27,7 +27,7 @@ export default defineConfig(async () => {
 
   return {
     server: {
-      // allowedHosts: ["*.ngrok-free.dev"],
+      // allowedHosts: [""],
 
       ...(isCodexSeatbeltSandbox
         ? {

@@ -12,6 +12,7 @@ import {
   type Finish,
   type Model,
 } from "../product-data";
+import { ModelLoadingIndicator } from "./model-loading-indicator";
 import {
   getOfficialModelUrl,
   loadOfficialProduct,
@@ -19,7 +20,6 @@ import {
   type DuoPose,
   type OfficialProduct,
 } from "./official-models";
-import { createDuoModel, createProModel, setAssemblyExploded } from "./scene-builders";
 
 const finishColors: Record<Finish, string> = {
   burgundy: "#5f1d2a",
@@ -69,7 +69,10 @@ type ProductSceneProps = {
 export function ProductScene({ containerRef, model, finish, duoPose, exploded, resetKey }: ProductSceneProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const configRef = useRef({ model, finish, duoPose, exploded, resetKey });
+  const [loadedModelKeys, setLoadedModelKeys] = useState<ReadonlySet<string>>(() => new Set());
   const [failed, setFailed] = useState(false);
+  const activeModelKey = officialModelKey(model, finish, duoPose);
+  const isLoading = !loadedModelKeys.has(activeModelKey);
 
   useEffect(() => {
     configRef.current = { model, finish, duoPose, exploded, resetKey };
@@ -106,14 +109,13 @@ export function ProductScene({ containerRef, model, finish, duoPose, exploded, r
     camera.position.set(0, 0, 13.2);
 
     const world = new THREE.Group();
-    const pro = createProModel();
-    const duo = createDuoModel();
     const officialHost = new THREE.Group();
-    world.add(pro.root, duo.root, officialHost);
+    world.add(officialHost);
     scene.add(world);
 
     const officialModels = new Map<string, OfficialProduct>();
     const pendingOfficialModels = new Set<string>();
+    const unavailableOfficialModels = new Set<string>();
     let disposed = false;
     const requestOfficialModel = (
       requestedModel: Model,
@@ -122,7 +124,12 @@ export function ProductScene({ containerRef, model, finish, duoPose, exploded, r
     ) => {
       const url = getOfficialModelUrl(requestedModel, requestedFinish, requestedPose);
       const modelKey = officialModelKey(requestedModel, requestedFinish, requestedPose);
-      if (!url || officialModels.has(modelKey) || pendingOfficialModels.has(modelKey)) return;
+      if (
+        !url
+        || officialModels.has(modelKey)
+        || pendingOfficialModels.has(modelKey)
+        || unavailableOfficialModels.has(modelKey)
+      ) return;
 
       pendingOfficialModels.add(modelKey);
       const targetHeight = productCatalog[requestedModel].sceneHeight;
@@ -133,8 +140,9 @@ export function ProductScene({ containerRef, model, finish, duoPose, exploded, r
       )
         .then((product) => {
           pendingOfficialModels.delete(modelKey);
-          if (disposed || product.meshCount === 0) {
-            canvas.dataset.modelSource = "procedural-fallback";
+          if (disposed) return;
+          if (product.meshCount === 0) {
+            unavailableOfficialModels.add(modelKey);
             return;
           }
           product.root.visible = false;
@@ -143,10 +151,14 @@ export function ProductScene({ containerRef, model, finish, duoPose, exploded, r
           officialHost.add(product.root);
           canvas.dataset.modelSource = "apple-ar-mesh";
           canvas.dataset.meshCount = String(product.meshCount);
+          setLoadedModelKeys((currentKeys) => {
+            if (currentKeys.has(modelKey)) return currentKeys;
+            return new Set(currentKeys).add(modelKey);
+          });
         })
         .catch(() => {
           pendingOfficialModels.delete(modelKey);
-          canvas.dataset.modelSource = "procedural-fallback";
+          unavailableOfficialModels.add(modelKey);
         });
     };
     requestOfficialModel("pro", "burgundy", "landscape");
@@ -298,34 +310,25 @@ export function ProductScene({ containerRef, model, finish, duoPose, exploded, r
       const activeModelKey = officialModelKey(config.model, config.finish, config.duoPose);
       const activeOfficial = officialModels.get(activeModelKey) ?? null;
       const useOfficial = activeOfficial !== null;
-      pro.root.visible = !isIpadModel(config.model)
-        && !isAppleWatchModel(config.model)
-        && !isAirPodsModel(config.model)
-        && !isMacModel(config.model)
-        && !isAppleVisionModel(config.model)
-        && config.model !== "duo"
-        && !useOfficial;
-      duo.root.visible = config.model === "duo" && !useOfficial;
       officialHost.visible = useOfficial;
       officialModels.forEach((product, productKey) => {
         product.root.visible = useOfficial && productKey === activeModelKey;
       });
-      canvas.dataset.modelSource = useOfficial ? "apple-ar-mesh" : "procedural-fallback";
-      if (activeOfficial) canvas.dataset.meshCount = String(activeOfficial.meshCount);
+      canvas.dataset.modelSource = useOfficial ? "apple-ar-mesh" : "loading";
+      if (activeOfficial) {
+        canvas.dataset.meshCount = String(activeOfficial.meshCount);
+      } else {
+        delete canvas.dataset.meshCount;
+      }
       targetColor.set(finishColors[config.finish]);
-      [...pro.finishMaterials, ...duo.finishMaterials].forEach((material) => material.color.lerp(targetColor, 0.08));
 
       const foldAngle = config.duoPose === "landscape" ? 180 : 24;
       const fold = (Math.PI - THREE.MathUtils.degToRad(foldAngle)) / 2;
-      duo.leftPivot.rotation.y += (fold - duo.leftPivot.rotation.y) * 0.1;
-      duo.rightPivot.rotation.y += (-fold - duo.rightPivot.rotation.y) * 0.1;
 
       dragX += (targetDragX - dragX) * 0.09;
       dragY += (targetDragY - dragY) * 0.09;
       zoom += (targetZoom - zoom) * 0.08;
       explodeAmount += ((config.exploded ? 1 : 0) - explodeAmount) * 0.08;
-      setAssemblyExploded(pro, explodeAmount);
-      setAssemblyExploded(duo, explodeAmount);
       if (activeOfficial) setOfficialExploded(activeOfficial, explodeAmount);
 
       const chapter = scrollProgress * 4;
@@ -403,11 +406,17 @@ export function ProductScene({ containerRef, model, finish, duoPose, exploded, r
   }
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="three-canvas"
-      tabIndex={0}
-      aria-label="Mô hình 3D tương tác. Kéo để xoay, dùng phím mũi tên để đổi góc nhìn, phím cộng và trừ để zoom."
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        className="three-canvas"
+        tabIndex={0}
+        aria-label="Mô hình 3D tương tác. Kéo để xoay, dùng phím mũi tên để đổi góc nhìn, phím cộng và trừ để zoom."
+      />
+      <ModelLoadingIndicator
+        isLoading={isLoading}
+        productName={productCatalog[model].label}
+      />
+    </>
   );
 }
