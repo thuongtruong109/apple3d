@@ -58,6 +58,26 @@ npm run lint
 npm run build
 ```
 
+## GitHub Container Registry
+
+The workflow in `.github/workflows/publish-container.yml` validates the app and
+builds the production Dockerfile for pull requests without publishing it. Pushes
+to `main`, version tags such as `v1.2.3`, and manually dispatched runs publish to
+`ghcr.io/thuongtruong109/apple3d` using the repository-scoped `GITHUB_TOKEN`.
+
+Published images receive branch, full commit SHA, and semantic-version tags.
+The default branch also updates `latest`. Each pushed digest includes an SBOM
+and a GitHub artifact provenance attestation.
+
+GitHub creates the first container package as private by default. Make the
+package public in its package settings for anonymous pulls; otherwise,
+authenticate Docker to `ghcr.io` before using these commands.
+
+```sh
+docker pull ghcr.io/thuongtruong109/apple3d:latest
+docker run --rm -p 8787:8787 ghcr.io/thuongtruong109/apple3d:latest
+```
+
 ## Docker Compose
 
 The container stack builds the Vinext/Cloudflare runtime as an internal `app`
