@@ -1,0 +1,76 @@
+name: thuongtruong1009/apple3d
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: thuongtruong1009/apple3d
+    init: true
+    restart: unless-stopped
+    expose:
+      - "8787"
+    environment:
+      NODE_ENV: production
+      CLOUDFLARE_CF_FETCH_ENABLED: "false"
+      WRANGLER_SEND_METRICS: "false"
+      WRANGLER_WRITE_LOGS: "false"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+      - /home/node/.config:size=1m,mode=0700,uid=1000,gid=1000
+    volumes:
+      - app-wrangler-state:/app/.wrangler
+      - app-runtime-state:/app/.sites-runtime
+      - app-worker-state:/app/dist/server/.wrangler
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - backend
+
+  nginx:
+    build:
+      context: docker/nginx
+      dockerfile: Dockerfile
+    image: thuongtruong1009/apple3d-nginx:local
+    init: true
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    ports:
+      - "${PORT:-8080}:8080"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+      - /var/cache/nginx:size=32m,mode=0755
+      - /var/run:size=1m,mode=0755
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--quiet",
+          "--tries=1",
+          "--spider",
+          "http://127.0.0.1:8080/healthz",
+        ]
+      interval: 30s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
+    networks:
+      - edge
+      - backend
+
+networks:
+  edge:
+  backend:
+    internal: true
+
+volumes:
+  app-wrangler-state:
+  app-runtime-state:
+  app-worker-state:

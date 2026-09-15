@@ -58,6 +58,34 @@ npm run lint
 npm run build
 ```
 
+## Docker Compose
+
+The container stack builds the Vinext/Cloudflare runtime as an internal `app`
+service and exposes it through Nginx. Nginx handles compression, security headers,
+long-lived caching for fingerprinted Next.js assets, shorter caching for 3D models,
+and a lightweight health endpoint.
+
+```sh
+cp .env.example .env
+docker compose up --build -d
+```
+
+Open `http://localhost:8080`. To use another host port, change `PORT` in `.env`
+or run `PORT=3000 docker compose up --build -d` in a POSIX shell.
+
+Useful operational commands:
+
+```sh
+docker compose ps
+docker compose logs -f app nginx
+docker compose down
+```
+
+The `app` service is intentionally not published to the host. Its writable
+Wrangler runtime directories are isolated in named volumes, while both containers otherwise use
+read-only filesystems and drop privilege escalation. The public health endpoint is
+available at `http://localhost:8080/healthz`.
+
 ## Cloudflare
 
 Cloudflare deployment support is intentionally retained through:
