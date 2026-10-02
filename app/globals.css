@@ -57,6 +57,137 @@ a {
   color: inherit;
 }
 
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #000;
+  opacity: 1;
+  transition:
+    opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.85s step-end;
+}
+.welcome-overlay--leaving {
+  visibility: hidden;
+  opacity: 0;
+}
+.welcome-overlay__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(64rem, 115vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #ffffff0d 0,
+    #8d91a30a 22%,
+    transparent 66%
+  );
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.75);
+  animation: welcome-glow 2.8s 0.2s ease-out forwards;
+}
+.welcome-overlay__content {
+  position: relative;
+  display: flex;
+  width: min(32rem, 86vw);
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-2vh);
+}
+.welcome-overlay__apple {
+  width: clamp(2.6rem, 5vw, 3.4rem);
+  height: auto;
+  margin-bottom: clamp(0.7rem, 2vh, 1.25rem);
+  overflow: visible;
+  fill: #f5f5f7;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(0.65rem) scale(0.82);
+  transform-origin: center;
+  animation: welcome-apple 1.15s 0.12s cubic-bezier(0.16, 1, 0.3, 1)
+    forwards;
+}
+.welcome-overlay__hello {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.welcome-overlay__hello text {
+  font-family: "Snell Roundhand", "Segoe Script", "Brush Script MT", cursive;
+  font-size: 116px;
+  font-weight: 400;
+  letter-spacing: -8px;
+}
+.welcome-overlay__hello-trace {
+  fill: transparent;
+  stroke: url("#hello-ink");
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1100;
+  stroke-dashoffset: 1100;
+  animation: welcome-write 1.9s 0.82s cubic-bezier(0.65, 0, 0.35, 1)
+    forwards;
+}
+.welcome-overlay__hello-fill {
+  fill: url("#hello-ink");
+  opacity: 0;
+  animation: welcome-fill 0.65s 2.15s ease-out forwards;
+}
+.welcome-overlay--leaving .welcome-overlay__content {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(-2vh) scale(1.035);
+  transition:
+    opacity 0.55s ease,
+    filter 0.75s ease,
+    transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes welcome-apple {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(0.65rem) scale(0.82);
+  }
+  55% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes welcome-write {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes welcome-fill {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes welcome-glow {
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .immersive-page {
   min-height: 100vh;
   background: #050506;
@@ -1874,6 +2005,25 @@ a {
     transition-duration: 0.01ms !important;
   }
   .footer-glow__aura {
+    display: none;
+  }
+  .welcome-overlay__glow,
+  .welcome-overlay__apple,
+  .welcome-overlay__hello-trace,
+  .welcome-overlay__hello-fill {
+    animation: none;
+  }
+  .welcome-overlay__glow {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .welcome-overlay__apple,
+  .welcome-overlay__hello-fill {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+  .welcome-overlay__hello-trace {
     display: none;
   }
   .footer-glow__wordmark--ambient,
