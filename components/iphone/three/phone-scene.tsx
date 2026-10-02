@@ -210,7 +210,7 @@ export function ProductScene({ containerRef, model, finish, duoPose, exploded, r
 
     const updateScroll = () => {
       const bounds = container.getBoundingClientRect();
-      const distance = Math.max(1, container.offsetHeight - window.innerHeight);
+      const distance = Math.max(1, window.innerHeight * 4);
       scrollProgress = THREE.MathUtils.clamp(-bounds.top / distance, 0, 1);
       container.style.setProperty("--journey", String(scrollProgress));
     };

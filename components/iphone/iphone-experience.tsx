@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Box, Maximize2, Minimize2, Rotate3D, Scan } from "lucide-react";
-import { useRef, useState, type CSSProperties } from "react";
-import { DeviceSelect } from "./device-select";
+import { Box, Rotate3D } from "lucide-react";
+import { useRef, useState } from "react";
+import { ExperienceControlDock } from "./experience-control-dock";
 import { ExperienceFooter } from "./experience-footer";
 import { LanguageSelect } from "./language-select";
 import {
@@ -12,18 +12,13 @@ import {
   type ProductCategory,
 } from "./product-category-data";
 import { ProductCategoryPreview } from "./product-category-preview";
-import { ProductSelect } from "./product-select";
 import { ProductTechnicalSpecs } from "./product-technical-specs";
-import { SegmentedControl } from "./segmented-control";
-import { SeriesSelect } from "./series-select";
 import { getProductCopy } from "./product-copy";
 import { productTechnicalSpecs } from "./product-specs";
 import {
-  finishes,
   getSeriesForModel,
   modelFinishes,
   productCatalog,
-  seriesCatalog,
   type Finish,
   type Model,
 } from "./product-data";
@@ -127,113 +122,6 @@ export function AppleProductExperience() {
             </>
           )}
 
-          <aside
-            className="control-dock"
-            aria-label={content.controls.panelLabel}
-          >
-            <div className="control-block control-block--product">
-              <span className="control-caption">{content.controls.product}</span>
-              <ProductSelect
-                label={content.controls.product}
-                value={category}
-                onChange={changeCategory}
-              />
-            </div>
-
-            {hasCatalog && (
-              <>
-                <div className="control-block control-block--series">
-                  <span className="control-caption">{content.controls.series}</span>
-                  <SeriesSelect
-                    label={content.controls.series}
-                    value={series}
-                    series={productCategoryCatalog[category].series}
-                    onChange={(next) => changeModel(seriesCatalog[next].defaultModel)}
-                  />
-                </div>
-
-                <div className="control-block control-block--model">
-                  <span className="control-caption">{content.controls.model}</span>
-                  <DeviceSelect
-                    label={content.controls.model}
-                    value={model}
-                    models={seriesCatalog[series].models}
-                    onChange={changeModel}
-                  />
-                </div>
-
-                <div className="control-block control-block--finish">
-                  <span className="control-caption">
-                    {content.controls.finish} · {content.finishes[finish]}
-                  </span>
-                  <div className="finish-picker">
-                    {availableFinishes.map((finishId) => (
-                      <button
-                        key={finishId}
-                        className={finish === finishId ? "is-active" : ""}
-                        onClick={() => setFinish(finishId)}
-                        aria-label={content.controls.chooseFinish(
-                          content.finishes[finishId],
-                        )}
-                        aria-pressed={finish === finishId}
-                        style={
-                          {
-                            "--finish-color": finishes[finishId].color,
-                          } as CSSProperties
-                        }
-                      />
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
-
-            {hasCatalog && productCatalog[model].isFoldable && (
-              <div className="control-block control-block--fold">
-                <span className="control-caption">{content.controls.pose}</span>
-                <SegmentedControl
-                  label={content.controls.pose}
-                  name="duo-pose"
-                  value={duoPose}
-                  onChange={setDuoPose}
-                  className="pose-picker"
-                  options={[
-                    { value: "closed", label: content.controls.closed },
-                    { value: "landscape", label: content.controls.landscape },
-                  ]}
-                />
-              </div>
-            )}
-
-            {hasCatalog && (
-              <div className="control-actions">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setExploded((value) => !value)}
-                  aria-pressed={exploded}
-                >
-                  {exploded ? (
-                    <Minimize2 aria-hidden="true" />
-                  ) : (
-                    <Maximize2 aria-hidden="true" />
-                  )}
-                  {exploded
-                    ? content.controls.collapse
-                    : content.controls.explode}
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon-sm"
-                  onClick={() => setResetKey((value) => value + 1)}
-                  aria-label={content.controls.resetView}
-                >
-                  <Scan aria-hidden="true" />
-                </Button>
-              </div>
-            )}
-          </aside>
-
           {hasCatalog && <div className="live-specs" aria-live="polite">
             <span>
               {active.display}
@@ -248,6 +136,29 @@ export function AppleProductExperience() {
               <small>{content.controls.power}</small>
             </span>
           </div>}
+        </div>
+
+        <div className="control-dock-layer">
+          <div className="control-dock-anchor">
+            <ExperienceControlDock
+              controls={content.controls}
+              finishNames={content.finishes}
+              category={category}
+              model={model}
+              finish={finish}
+              series={series}
+              availableFinishes={availableFinishes}
+              duoPose={duoPose}
+              exploded={exploded}
+              hasCatalog={hasCatalog}
+              onCategoryChange={changeCategory}
+              onModelChange={changeModel}
+              onFinishChange={setFinish}
+              onDuoPoseChange={setDuoPose}
+              onExplodedChange={setExploded}
+              onResetView={() => setResetKey((value) => value + 1)}
+            />
+          </div>
         </div>
 
         {hasCatalog && <div className="scroll-narrative">
@@ -294,15 +205,17 @@ export function AppleProductExperience() {
             </Button>
           </article>
         </div>}
-      </section>
 
-      {hasCatalog && (
-        <ProductTechnicalSpecs
-          language={language}
-          model={model}
-          productName={active.name}
-        />
-      )}
+        {hasCatalog && (
+          <div className="immersive-details">
+            <ProductTechnicalSpecs
+              language={language}
+              model={model}
+              productName={active.name}
+            />
+          </div>
+        )}
+      </section>
 
       <ExperienceFooter content={content.sources} />
     </main>

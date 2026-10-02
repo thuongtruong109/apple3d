@@ -29,6 +29,7 @@ export type Translation = {
     model: string;
     finish: string;
     pose: string;
+    action: string;
     closed: string;
     landscape: string;
     collapse: string;
@@ -128,6 +129,7 @@ export const translations: Record<Language, Translation> = {
       model: "MODEL",
       finish: "FINISH",
       pose: "POSE",
+      action: "ACTION",
       closed: "Closed",
       landscape: "Landscape",
       collapse: "Collapse",
@@ -240,6 +242,7 @@ export const translations: Record<Language, Translation> = {
       model: "PHIÊN BẢN",
       finish: "MÀU",
       pose: "TƯ THẾ",
+      action: "THAO TÁC",
       closed: "Đóng",
       landscape: "Ngang",
       collapse: "Chập lớp",
@@ -352,6 +355,7 @@ export const translations: Record<Language, Translation> = {
       model: "MODELO",
       finish: "ACABAMENTO",
       pose: "POSIÇÃO",
+      action: "AÇÃO",
       closed: "Fechado",
       landscape: "Paisagem",
       collapse: "Recolher",
@@ -464,6 +468,7 @@ export const translations: Record<Language, Translation> = {
       model: "MODELO",
       finish: "ACABADO",
       pose: "POSICIÓN",
+      action: "ACCIÓN",
       closed: "Cerrado",
       landscape: "Horizontal",
       collapse: "Replegar",
@@ -576,6 +581,7 @@ export const translations: Record<Language, Translation> = {
       model: "机型",
       finish: "外观",
       pose: "形态",
+      action: "操作",
       closed: "闭合",
       landscape: "横向",
       collapse: "合并",
@@ -688,6 +694,7 @@ export const translations: Record<Language, Translation> = {
       model: "モデル",
       finish: "仕上げ",
       pose: "スタイル",
+      action: "操作",
       closed: "閉じる",
       landscape: "横向き",
       collapse: "元に戻す",

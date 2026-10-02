@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { AppleMarkPath } from "./apple-mark";
 
-const INTRO_EXIT_DELAY = 3400;
-const INTRO_REMOVE_DELAY = 4300;
+const INTRO_EXIT_DELAY = 1900;
+const INTRO_REMOVE_DELAY = 2500;
 const REDUCED_MOTION_EXIT_DELAY = 500;
 const REDUCED_MOTION_REMOVE_DELAY = 650;
 
