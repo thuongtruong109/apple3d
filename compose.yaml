@@ -1,11 +1,11 @@
-name: thuongtruong1009/apple3d
+name: thuongtruong1009/apxle
 
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    image: thuongtruong1009/apple3d
+    image: thuongtruong1009/apxle
     init: true
     restart: unless-stopped
     expose:
@@ -32,7 +32,7 @@ services:
     build:
       context: docker/nginx
       dockerfile: Dockerfile
-    image: thuongtruong1009/apple3d-nginx:local
+    image: thuongtruong1009/apxle-nginx:local
     init: true
     restart: unless-stopped
     depends_on:

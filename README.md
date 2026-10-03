@@ -1,10 +1,10 @@
 <div align="center">
 
-# Apple3D
+# Apxle
 
 ### Explore the Apple product universe in an immersive, interactive 3D experience.
 
-[![Build](https://img.shields.io/github/actions/workflow/status/thuongtruong109/apple3d/publish.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=build)](https://github.com/thuongtruong109/apple3d/actions/workflows/publish.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/thuongtruong109/apxle/publish.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=build)](https://github.com/thuongtruong109/apxle/actions/workflows/publish.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=101010)](https://react.dev/)
 [![Three.js](https://img.shields.io/badge/Three.js-r186-000000?style=for-the-badge&logo=threedotjs&logoColor=white)](https://threejs.org/)
@@ -14,11 +14,11 @@
 [![Vercel](https://img.shields.io/badge/Vercel-Ready-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-%E2%89%A5_22.13-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![GitHub stars](https://img.shields.io/github/stars/thuongtruong109/apple3d?style=flat-square&logo=github&label=Stars)](https://github.com/thuongtruong109/apple3d/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/thuongtruong109/apxle?style=flat-square&logo=github&label=Stars)](https://github.com/thuongtruong109/apxle/stargazers)
 
 <br />
 
-<img src="./public/iphone-18-concept.png" alt="Apple3D iPhone concept render" width="460" />
+<img src="./public/iphone-18-concept.png" alt="Apxle iPhone concept render" width="460" />
 
 <br />
 
@@ -26,13 +26,13 @@
 
 </div>
 
-Apple3D is a browser-based product lab for exploring Apple hardware through
+Apxle is a browser-based product lab for exploring Apple hardware through
 real-time 3D scenes, detailed technical storytelling, finishes, poses, and an
 extensible product catalog. One shared application can be deployed through the
 Cloudflare Workers toolchain or as a native Next.js application on Vercel.
 
 > [!NOTE]
-> Apple3D is an independent showcase and research project. It is not affiliated
+> Apxle is an independent showcase and research project. It is not affiliated
 > with, endorsed by, or sponsored by Apple Inc. Concept products are presented
 > as concepts, not as official announcements.
 
@@ -55,26 +55,26 @@ Cloudflare Workers toolchain or as a native Next.js application on Vercel.
 
 ### Catalog at a glance
 
-| Family | Coverage in this repository |
-| --- | --- |
-| **iPhone** | iPhone 14–18 families, iPhone Air, and the foldable iPhone Duo concept |
-| **iPad** | iPad Pro M5, iPad Air M4, iPad A16, and iPad mini A17 Pro |
-| **Apple Watch** | Series 3 and 5–11, Ultra through Ultra 3, SE and SE 3 |
-| **AirPods** | AirPods 3–5, AirPods Pro 1–3, and AirPods Max 1–2 |
-| **Mac** | MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio, and Mac Pro |
-| **Apple Vision** | An isolated Apple Vision catalog ready for continued expansion |
+| Family           | Coverage in this repository                                            |
+| ---------------- | ---------------------------------------------------------------------- |
+| **iPhone**       | iPhone 14–18 families, iPhone Air, and the foldable iPhone Duo concept |
+| **iPad**         | iPad Pro M5, iPad Air M4, iPad A16, and iPad mini A17 Pro              |
+| **Apple Watch**  | Series 3 and 5–11, Ultra through Ultra 3, SE and SE 3                  |
+| **AirPods**      | AirPods 3–5, AirPods Pro 1–3, and AirPods Max 1–2                      |
+| **Mac**          | MacBook Air, MacBook Pro, iMac, Mac mini, Mac Studio, and Mac Pro      |
+| **Apple Vision** | An isolated Apple Vision catalog ready for continued expansion         |
 
 ## 🧰 Tech stack
 
-| Layer | Technology |
-| --- | --- |
-| Application | Next.js 16, React 19, TypeScript |
-| 3D rendering | Three.js, GLTFLoader |
-| UI | Tailwind CSS, Base UI, Radix UI, shadcn components, Lucide |
-| Cloudflare runtime | Vinext, Vite, Cloudflare Vite plugin, Wrangler |
-| Vercel runtime | Native Next.js build and runtime |
-| Containers | Docker, Docker Compose, Nginx |
-| Automation | GitHub Actions, GHCR, SBOM, provenance attestation |
+| Layer              | Technology                                                 |
+| ------------------ | ---------------------------------------------------------- |
+| Application        | Next.js 16, React 19, TypeScript                           |
+| 3D rendering       | Three.js, GLTFLoader                                       |
+| UI                 | Tailwind CSS, Base UI, Radix UI, shadcn components, Lucide |
+| Cloudflare runtime | Vinext, Vite, Cloudflare Vite plugin, Wrangler             |
+| Vercel runtime     | Native Next.js build and runtime                           |
+| Containers         | Docker, Docker Compose, Nginx                              |
+| Automation         | GitHub Actions, GHCR, SBOM, provenance attestation         |
 
 ## 🧭 Quick start
 
@@ -86,8 +86,8 @@ Cloudflare Workers toolchain or as a native Next.js application on Vercel.
 ### Install and run
 
 ```sh
-git clone https://github.com/thuongtruong109/apple3d.git
-cd apple3d
+git clone https://github.com/thuongtruong109/apxle.git
+cd apxle
 npm run install:ci
 npm run dev
 ```
@@ -97,13 +97,13 @@ Cloudflare for backward compatibility.
 
 ### Choose a runtime
 
-| Task | Cloudflare / Vinext | Vercel / Next.js |
-| --- | --- | --- |
-| Develop | `npm run dev:cloudflare` | `npm run dev:vercel` |
-| Build | `npm run build:cloudflare` | `npm run build:vercel` |
+| Task             | Cloudflare / Vinext        | Vercel / Next.js       |
+| ---------------- | -------------------------- | ---------------------- |
+| Develop          | `npm run dev:cloudflare`   | `npm run dev:vercel`   |
+| Build            | `npm run build:cloudflare` | `npm run build:vercel` |
 | Serve production | `npm run start:cloudflare` | `npm run start:vercel` |
-| Output | `dist/` | `.next/` |
-| Local port | `5173` | `3000` |
+| Output           | `dist/`                    | `.next/`               |
+| Local port       | `5173`                     | `3000`                 |
 
 The short aliases `npm run dev`, `npm run build`, and `npm start` continue to
 select the Cloudflare pipeline. Both targets write to separate output folders,
@@ -118,7 +118,7 @@ Shared Next.js source ───┤
 ```
 
 ```text
-apple3d/
+apxle/
 ├── app/                    # Next.js App Router entrypoints
 ├── components/
 │   ├── iphone/             # Product domain, catalog, copy, i18n, and 3D scene
@@ -185,8 +185,8 @@ Pull the image published by the
 [`publish.yml`](./.github/workflows/publish.yml) workflow:
 
 ```sh
-docker pull ghcr.io/thuongtruong109/apple3d:latest
-docker run --rm -p 8787:8787 ghcr.io/thuongtruong109/apple3d:latest
+docker pull ghcr.io/thuongtruong109/apxle:latest
+docker run --rm -p 8787:8787 ghcr.io/thuongtruong109/apxle:latest
 ```
 
 Pushes to `main`, semantic version tags such as `v1.2.3`, and manual workflow
@@ -251,9 +251,9 @@ performance improvements are welcome.
 4. Document the source and conversion process for new 3D assets.
 5. Open a pull request with screenshots or recordings for visual changes.
 
-[Open an issue](https://github.com/thuongtruong109/apple3d/issues/new) ·
-[View pull requests](https://github.com/thuongtruong109/apple3d/pulls) ·
-[Browse packages](https://github.com/thuongtruong109/apple3d/pkgs/container/apple3d)
+[Open an issue](https://github.com/thuongtruong109/apxle/issues/new) ·
+[View pull requests](https://github.com/thuongtruong109/apxle/pulls) ·
+[Browse packages](https://github.com/thuongtruong109/apxle/pkgs/container/apxle)
 
 ## ⚖️ Trademark notice
 
@@ -266,6 +266,6 @@ and educational project.
 
 Built for the web with React, Three.js, and a great deal of attention to detail.
 
-⭐ Star the repository if Apple3D inspires your next interactive experience.
+⭐ Star the repository if Apxle inspires your next interactive experience.
 
 </div>
