@@ -63,7 +63,7 @@ export const extendedTranslations: Record<ExtendedLanguage, Translation> = {
       finalAction: "Désassembler le matériel",
     },
     sources: {
-      badge: "MAILLAGE AR APPLE / THREE.JS",
+      badge: "MAILLAGE AR APPLE / ÉTUDE SPATIALE",
       title: "Façonné par la géométrie réelle.",
       description: "Topologie, courbes, modules photo, UV et matériaux sont directement convertis depuis les ressources AR publiques d’Apple.",
       navLabel: "Sources de référence",
@@ -176,7 +176,7 @@ export const extendedTranslations: Record<ExtendedLanguage, Translation> = {
       finalAction: "Hardware zerlegen",
     },
     sources: {
-      badge: "APPLE AR-MESH / THREE.JS",
+      badge: "APPLE AR-MESH / RAUMSTUDIE",
       title: "Aus echter Geometrie geformt.",
       description: "Topologie, Kurven, Kamerageometrie, UVs und Materialien werden direkt aus Apples öffentlichen AR-Ressourcen konvertiert.",
       navLabel: "Referenzquellen",
@@ -289,7 +289,7 @@ export const extendedTranslations: Record<ExtendedLanguage, Translation> = {
       finalAction: "하드웨어 분해",
     },
     sources: {
-      badge: "APPLE AR 메시 / THREE.JS",
+      badge: "APPLE AR 메시 / 공간 연구",
       title: "실제 지오메트리로 빚어낸 형태.",
       description: "토폴로지, 곡면, 카메라 구조, UV와 소재를 Apple의 공개 AR 에셋에서 직접 변환했습니다.",
       navLabel: "참조 출처",

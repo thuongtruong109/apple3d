@@ -16,6 +16,23 @@ export function FooterOrbitNav({
 }: FooterOrbitNavProps) {
   return (
     <nav className="footer-orbit-nav" aria-label={navLabel}>
+      <svg
+        className="footer-orbit-nav__constellation"
+        viewBox="0 0 720 640"
+        aria-hidden="true"
+      >
+        <path d="M70 324C154 112 318 40 548 92C658 118 703 220 645 316C577 429 397 482 218 430C124 403 64 369 70 324Z" />
+        <path d="M132 116C289 223 437 341 602 528" />
+        <path d="M96 508C260 382 431 230 623 142" />
+        <g>
+          <circle cx="132" cy="116" r="4" />
+          <circle cx="623" cy="142" r="3" />
+          <circle cx="70" cy="324" r="3" />
+          <circle cx="645" cy="316" r="4" />
+          <circle cx="96" cy="508" r="3" />
+          <circle cx="602" cy="528" r="4" />
+        </g>
+      </svg>
       <span className="footer-orbit-nav__eyebrow">{resourcesLabel}</span>
       <span className="footer-orbit-nav__ring" aria-hidden="true" />
       <span className="footer-orbit-nav__satellite" aria-hidden="true" />

@@ -23,7 +23,11 @@ const initialGlowStyle: GlowStyle = {
   "--footer-shift-y-reverse": "0px",
 };
 
-export function FooterGlow() {
+type FooterGlowProps = {
+  resourcesLabel: string;
+};
+
+export function FooterGlow({ resourcesLabel }: FooterGlowProps) {
   const glowRef = useRef<HTMLDivElement>(null);
 
   function updateGlow(event: PointerEvent<HTMLDivElement>) {
@@ -101,6 +105,10 @@ export function FooterGlow() {
         <svg className="footer-glow__logo" viewBox="0 0 1400 420" preserveAspectRatio="xMidYMid meet">
           <FooterWordmark className="footer-glow__wordmark footer-glow__wordmark--lit" />
         </svg>
+      </div>
+      <div className="footer-glow__meta" aria-hidden="true">
+        <span>{resourcesLabel}</span>
+        <span>APPLE PRODUCT ARCHIVE / 2026</span>
       </div>
     </div>
   );

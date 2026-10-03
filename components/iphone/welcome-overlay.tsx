@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AppleMarkPath } from "./apple-mark";
+import { WelcomeHelloWordmark } from "./welcome-hello-wordmark";
 
 const INTRO_EXIT_DELAY = 1900;
 const INTRO_REMOVE_DELAY = 2500;
@@ -57,35 +58,7 @@ export function WelcomeOverlay() {
           <AppleMarkPath />
         </svg>
 
-        <svg
-          className="welcome-overlay__hello"
-          viewBox="0 0 520 150"
-          focusable="false"
-        >
-          <defs>
-            <linearGradient id="hello-ink" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stopColor="#ffffff" />
-              <stop offset="0.5" stopColor="#e8e8ed" />
-              <stop offset="1" stopColor="#a9a9b0" />
-            </linearGradient>
-          </defs>
-          <text
-            className="welcome-overlay__hello-trace"
-            x="260"
-            y="108"
-            textAnchor="middle"
-          >
-            Hello
-          </text>
-          <text
-            className="welcome-overlay__hello-fill"
-            x="260"
-            y="108"
-            textAnchor="middle"
-          >
-            Hello
-          </text>
-        </svg>
+        <WelcomeHelloWordmark />
       </div>
     </div>
   );

@@ -13,6 +13,8 @@ import {
 } from "./product-category-data";
 import { ProductCategoryPreview } from "./product-category-preview";
 import { ProductTechnicalSpecs } from "./product-technical-specs";
+import { ScrollReveal, WordReveal } from "./scroll-reveal";
+import { StorePolicyExperience } from "./store-policy-experience";
 import { getProductCopy } from "./product-copy";
 import { productTechnicalSpecs } from "./product-specs";
 import {
@@ -163,46 +165,52 @@ export function AppleProductExperience() {
 
         {hasCatalog && <div className="scroll-narrative">
           <article className="journey-copy journey-copy--one">
-            <p className="journey-kicker">{introKicker}</p>
-            <h1>{active.name}</h1>
-            <h2>{active.eyebrow}</h2>
-            <p>{active.intro}</p>
-            <span className="scroll-cue">{content.journey.scrollCue}</span>
+            <ScrollReveal as="p" className="journey-kicker" delay={2000}>
+              {introKicker}
+            </ScrollReveal>
+            <WordReveal as="h1" text={active.name} delay={2100} />
+            <WordReveal text={active.eyebrow} delay={2220} />
+            <ScrollReveal as="p" delay={2380}>{active.intro}</ScrollReveal>
+            <ScrollReveal as="span" className="scroll-cue" delay={2520}>
+              {content.journey.scrollCue}
+            </ScrollReveal>
           </article>
 
           <article className="journey-copy journey-copy--two journey-copy--right">
-            <p className="journey-kicker">{content.journey.designKicker}</p>
-            <h2>{active.designTitle}</h2>
-            <p>{active.designBody}</p>
+            <ScrollReveal as="p" className="journey-kicker">
+              {content.journey.designKicker}
+            </ScrollReveal>
+            <WordReveal text={active.designTitle} delay={70} />
+            <ScrollReveal as="p" delay={180}>{active.designBody}</ScrollReveal>
           </article>
 
           <article className="journey-copy journey-copy--three">
-            <p className="journey-kicker">
+            <ScrollReveal as="p" className="journey-kicker">
               {active.secondarySectionKicker ?? content.journey.cameraKicker}
-            </p>
-            <h2>{active.cameraTitle}</h2>
-            <p>{active.cameraBody}</p>
+            </ScrollReveal>
+            <WordReveal text={active.cameraTitle} delay={70} />
+            <ScrollReveal as="p" delay={180}>{active.cameraBody}</ScrollReveal>
           </article>
 
           <article className="journey-copy journey-copy--four journey-copy--right">
-            <p className="journey-kicker">
+            <ScrollReveal as="p" className="journey-kicker">
               {content.journey.performanceKicker}
-            </p>
-            <h2>{active.performanceTitle}</h2>
-            <p>{active.performanceBody}</p>
+            </ScrollReveal>
+            <WordReveal text={active.performanceTitle} delay={70} />
+            <ScrollReveal as="p" delay={180}>{active.performanceBody}</ScrollReveal>
           </article>
 
           <article className="journey-copy journey-copy--five">
-            <p className="journey-kicker">{content.journey.turnKicker}</p>
-            <h2>
-              {content.journey.finalTitle[0]}
-              <br />
-              {content.journey.finalTitle[1]}
-            </h2>
-            <p>{content.journey.finalBody}</p>
-            <Button onClick={() => setExploded(true)} className="final-action">
-              <Box aria-hidden="true" /> {content.journey.finalAction}
-            </Button>
+            <ScrollReveal as="p" className="journey-kicker">
+              {content.journey.turnKicker}
+            </ScrollReveal>
+            <WordReveal text={content.journey.finalTitle.join(" ")} delay={70} />
+            <ScrollReveal as="p" delay={180}>{content.journey.finalBody}</ScrollReveal>
+            <ScrollReveal className="journey-action-reveal" delay={260}>
+              <Button onClick={() => setExploded(true)} className="final-action">
+                <Box aria-hidden="true" /> {content.journey.finalAction}
+              </Button>
+            </ScrollReveal>
           </article>
         </div>}
 
@@ -216,6 +224,8 @@ export function AppleProductExperience() {
           </div>
         )}
       </section>
+
+      <StorePolicyExperience language={language} />
 
       <ExperienceFooter content={content.sources} />
     </main>

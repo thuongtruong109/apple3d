@@ -170,7 +170,7 @@ export const translations: Record<Language, Translation> = {
       finalAction: "Explode the hardware",
     },
     sources: {
-      badge: "APPLE AR MESH / THREE.JS",
+      badge: "APPLE AR MESH / SPATIAL STUDY",
       title: "Shaped from real geometry.",
       description: "Topology, curves, camera geometry, UVs, and materials are converted directly from Apple’s public AR assets.",
       navLabel: "Reference sources",
@@ -283,7 +283,7 @@ export const translations: Record<Language, Translation> = {
       finalAction: "Tách phần cứng",
     },
     sources: {
-      badge: "APPLE AR MESH / THREE.JS",
+      badge: "APPLE AR MESH / NGHIÊN CỨU KHÔNG GIAN",
       title: "Tạo hình từ hình học nguyên bản.",
       description: "Topology, độ bo, cụm camera, UV và vật liệu được chuyển trực tiếp từ asset AR công khai của Apple.",
       navLabel: "Nguồn tham chiếu",
@@ -396,7 +396,7 @@ export const translations: Record<Language, Translation> = {
       finalAction: "Separar o hardware",
     },
     sources: {
-      badge: "MALHA AR APPLE / THREE.JS",
+      badge: "MALHA AR APPLE / ESTUDO ESPACIAL",
       title: "Criado a partir de geometria real.",
       description: "Topologia, curvas, câmeras, UVs e materiais são convertidos diretamente dos recursos públicos de AR da Apple.",
       navLabel: "Fontes de referência",
@@ -509,7 +509,7 @@ export const translations: Record<Language, Translation> = {
       finalAction: "Separar el hardware",
     },
     sources: {
-      badge: "MALLA AR DE APPLE / THREE.JS",
+      badge: "MALLA AR DE APPLE / ESTUDIO ESPACIAL",
       title: "Creado a partir de geometría real.",
       description: "La topología, las curvas, las cámaras, los UV y los materiales se convierten directamente desde los recursos AR públicos de Apple.",
       navLabel: "Fuentes de referencia",
@@ -622,7 +622,7 @@ export const translations: Record<Language, Translation> = {
       finalAction: "拆解硬件",
     },
     sources: {
-      badge: "APPLE AR 网格 / THREE.JS",
+      badge: "APPLE AR 网格 / 空间研究",
       title: "源自真实几何结构。",
       description: "拓扑结构、曲面、相机组件、UV 和材质均直接转换自 Apple 公开的 AR 资源。",
       navLabel: "参考资料",
@@ -735,7 +735,7 @@ export const translations: Record<Language, Translation> = {
       finalAction: "ハードウェアを分解",
     },
     sources: {
-      badge: "APPLE ARメッシュ / THREE.JS",
+      badge: "APPLE ARメッシュ / 空間スタディ",
       title: "実際のジオメトリから生まれた造形。",
       description: "トポロジー、曲面、カメラ形状、UV、マテリアルは、Appleが公開するARアセットから直接変換されています。",
       navLabel: "参照元",

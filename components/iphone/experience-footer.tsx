@@ -2,6 +2,8 @@ import { Sparkles } from "lucide-react";
 import type { Translation } from "./i18n";
 import { FooterGlow } from "./footer-glow";
 import { FooterOrbitNav } from "./footer-orbit-nav";
+import { FooterSignalRail } from "./footer-signal-rail";
+import { ScrollReveal, WordReveal } from "./scroll-reveal";
 
 type ExperienceFooterProps = {
   content: Translation["sources"];
@@ -10,20 +12,23 @@ type ExperienceFooterProps = {
 export function ExperienceFooter({ content }: ExperienceFooterProps) {
   return (
     <footer className="experience-footer" id="sources">
-      <FooterGlow />
+      <FooterGlow resourcesLabel={content.resources} />
+      <FooterSignalRail />
 
       <div className="footer-closing">
         <article className="footer-manifesto">
-          <div className="footer-badge">
+          <ScrollReveal className="footer-badge">
             <Sparkles aria-hidden="true" />
             <span>{content.badge}</span>
-          </div>
-          <h2>{content.title}</h2>
-          <p className="footer-manifesto__intro">{content.description}</p>
-          <div className="footer-manifesto__note">
+          </ScrollReveal>
+          <WordReveal text={content.title} delay={90} />
+          <ScrollReveal as="p" className="footer-manifesto__intro" delay={180}>
+            {content.description}
+          </ScrollReveal>
+          <ScrollReveal className="footer-manifesto__note" delay={260}>
             <span className="footer-column__label">{content.experience}</span>
             <p>{content.conceptNote}</p>
-          </div>
+          </ScrollReveal>
         </article>
 
         <FooterOrbitNav
@@ -36,7 +41,9 @@ export function ExperienceFooter({ content }: ExperienceFooterProps) {
 
       <div className="footer-bottom">
         <span>APPLE PRODUCT LAB / 2026</span>
-        <span>THREE.JS / APPLE AR / INDEPENDENT</span>
+        <span className="footer-bottom__status">
+          <i aria-hidden="true" /> APPLE AR / INDEPENDENT SPATIAL STUDY
+        </span>
       </div>
     </footer>
   );

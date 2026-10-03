@@ -1,6 +1,7 @@
 import type { Language } from "./i18n";
 import { getProductCategoryCopy } from "./product-category-copy";
 import type { ProductCategory } from "./product-category-data";
+import { ScrollReveal, WordReveal } from "./scroll-reveal";
 
 type ProductCategoryPreviewProps = {
   category: ProductCategory;
@@ -21,14 +22,16 @@ export function ProductCategoryPreview({
         <span />
       </div>
       <article className="category-preview__copy">
-        <p className="journey-kicker">{copy.kicker}</p>
-        <h1>{copy.title}</h1>
-        <h2>{copy.eyebrow}</h2>
-        <p>{copy.intro}</p>
-        <div className="category-preview__series">
+        <ScrollReveal as="p" className="journey-kicker">
+          {copy.kicker}
+        </ScrollReveal>
+        <WordReveal as="h1" text={copy.title} delay={70} />
+        <WordReveal text={copy.eyebrow} delay={140} />
+        <ScrollReveal as="p" delay={220}>{copy.intro}</ScrollReveal>
+        <ScrollReveal className="category-preview__series" delay={300}>
           <small>{copy.plannedLabel}</small>
           <p>{copy.plannedSeries.join(" · ")}</p>
-        </div>
+        </ScrollReveal>
       </article>
     </div>
   );
